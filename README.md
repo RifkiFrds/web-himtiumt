@@ -36,12 +36,9 @@ React Vite, Javascript, Tailwind CSS
 │   │   │   │   ├── 📁 alumni-section
 │   │   │   │   └── 📁 hero-section
 │   │   │   └── 📁 view
-│   │   ├── 📁 layout
-│   │   │   ├── 📁 components
-│   │   │   └── 📁 view
-│   │   └── 📁 sharing
+│   │   └── 📁 layout
 │   │       ├── 📁 components
-│   │       └── 📁 views
+│   │       └── 📁 view
 │   └── 📁 lib
 ├── 📄 .gitignore
 ├── 📄 eslint.config.js
