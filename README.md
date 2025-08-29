@@ -23,26 +23,26 @@ React Vite, Javascript, Tailwind CSS
 📦 web-himtiumt
 ├── 📁 public
 │   └── 📁 images
-└── 📁 src
-    ├── 📁 core
-    │   └── 📁 assets
-    ├── 📁 features
-    │   ├── 📁 global
-    │   │   └── 📁 components
-    │   │       ├── 📁 Background
-    │   │       └── 📁 Badges
-    │   ├── 📁 home
-    │   │   ├── 📁 components
-    │   │   │   ├── 📁 alumni-section
-    │   │   │   └── 📁 hero-section
-    │   │   └── 📁 view
-    │   ├── 📁 layout
-    │   │   ├── 📁 components
-    │   │   └── 📁 view
-    │   └── 📁 sharing
-    │       ├── 📁 components
-    │       └── 📁 views
-    └── 📁 lib
+├── 📁 src
+│   ├── 📁 core
+│   │   └── 📁 assets
+│   ├── 📁 features
+│   │   ├── 📁 global
+│   │   │   └── 📁 components
+│   │   │       ├── 📁 Background
+│   │   │       └── 📁 Badges
+│   │   ├── 📁 home
+│   │   │   ├── 📁 components
+│   │   │   │   ├── 📁 alumni-section
+│   │   │   │   └── 📁 hero-section
+│   │   │   └── 📁 view
+│   │   ├── 📁 layout
+│   │   │   ├── 📁 components
+│   │   │   └── 📁 view
+│   │   └── 📁 sharing
+│   │       ├── 📁 components
+│   │       └── 📁 views
+│   └── 📁 lib
 ├── 📄 .gitignore
 ├── 📄 eslint.config.js
 ├── 📄 index.html
