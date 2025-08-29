@@ -20,27 +20,40 @@ React Vite, Javascript, Tailwind CSS
 ## 📂 Project Structure
 
 ```
-📦 himti-web-revamp
-├── 📁 src
-│   ├── 📁 core
-│   │   ├── 📁 models
-│   │       ├── 📁 user.js
-│   │   ├── 📁 service
-│   │       ├── 📁 user.js
-│   │   ├── 📁 config
-│   │       ├── 📁 app.js
-│   ├── 📁 entries
-│   │   ├── 📄 app.jsx
-│   │   ├── 📁 index.css
-│   ├── 📁 feature
-│   │   ├── 📁 components
-│   │   │   ├── ⚛ UserForm.jsx
-│   │   ├── 📁 hooks
-│   │   │   ├── ⚛ useRegistration.js
-│   │   ├── 📁 views
-│   │   │   ├── ⚛ UserFormViews.jsx
+Tentu, ini adalah struktur folder dari repositori tersebut dalam format markdown:
+
+Tentu, ini adalah struktur yang telah direvisi dengan file-file tersebut diletakkan di bagian bawah:
+
+```
+📦 web-himtiumt
+├── 📁 public
+│   └── 📁 images
+└── 📁 src
+    ├── 📁 core
+    │   └── 📁 assets
+    ├── 📁 features
+    │   ├── 📁 global
+    │   │   └── 📁 components
+    │   │       ├── 📁 Background
+    │   │       └── 📁 Badges
+    │   ├── 📁 home
+    │   │   ├── 📁 components
+    │   │   │   ├── 📁 alumni-section
+    │   │   │   └── 📁 hero-section
+    │   │   └── 📁 view
+    │   ├── 📁 layout
+    │   │   ├── 📁 components
+    │   │   └── 📁 view
+    │   └── 📁 sharing
+    │       ├── 📁 components
+    │       └── 📁 views
+    └── 📁 lib
+├── 📄 .gitignore
+├── 📄 eslint.config.js
 ├── 📄 index.html
-├── 📄 README.md
+├── 📄 package-lock.json
+├── 📄 package.json
+└── 📄 README.md
 ```
 
 ## 🚀 How to run?
