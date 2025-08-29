@@ -24,7 +24,7 @@ Tentu, ini adalah struktur folder dari repositori tersebut dalam format markdown
 
 Tentu, ini adalah struktur yang telah direvisi dengan file-file tersebut diletakkan di bagian bawah:
 
-```
+````
 📦 web-himtiumt
 ├── 📁 public
 │   └── 📁 images
@@ -54,7 +54,7 @@ Tentu, ini adalah struktur yang telah direvisi dengan file-file tersebut diletak
 ├── 📄 package-lock.json
 ├── 📄 package.json
 └── 📄 README.md
-```
+````
 
 ## 🚀 How to run?
 
