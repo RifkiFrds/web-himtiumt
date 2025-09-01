@@ -1,5 +1,3 @@
-// src/features/about/data/members.js
-
 export const himtiStructure = [
   {
     title: "Badan Pengurus Harian",
