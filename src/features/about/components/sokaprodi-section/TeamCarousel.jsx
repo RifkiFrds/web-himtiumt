@@ -16,10 +16,10 @@ export default function TeamCarousel({ members }) {
           slidesPerView={1}
           centeredSlides={true}
           loop={true}
-          loopedSlides={members.length} 
+          loopedSlides={members.length}
           speed={800}
           autoplay={{
-            delay: 2000, 
+            delay: 2000,
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
           }}
@@ -30,9 +30,11 @@ export default function TeamCarousel({ members }) {
             <SwiperSlide key={index}>
               <div
                 className={`rounded-2xl shadow-lg overflow-hidden transition-all duration-500
-                  ${index === activeIndex
-                    ? "bg-white opacity-100 scale-100"
-                    : "bg-gray-200 opacity-50 scale-95"}`}
+                  ${
+                    index === activeIndex
+                      ? "bg-white opacity-100 scale-100"
+                      : "bg-gray-200 opacity-50 scale-95"
+                  }`}
               >
                 <img
                   src={member.image}
@@ -41,14 +43,14 @@ export default function TeamCarousel({ members }) {
                 />
                 <div className="p-4 text-center">
                   <h3 className="text-lg font-bold text-gray-900">
-                  {member.name}
-                </h3>
-                <Poppins className="text-yellow-500 font-semibold mt-1">
-                  {member.role}
-                </Poppins>
-                <Poppins className="text-gray-500 text-sm mt-2">
-                  {member.bio}
-                </Poppins>
+                    {member.name}
+                  </h3>
+                  <Poppins className="text-yellow-500 font-semibold mt-1">
+                    {member.role}
+                  </Poppins>
+                  <Poppins className="text-gray-500 text-sm mt-2">
+                    {member.bio}
+                  </Poppins>
                 </div>
               </div>
             </SwiperSlide>
@@ -62,9 +64,11 @@ export default function TeamCarousel({ members }) {
           <div
             key={index}
             className={`rounded-2xl shadow-lg overflow-hidden transition-all duration-500
-              ${index === activeIndex
-                ? "bg-white opacity-100 scale-100"
-                : "bg-gray-100 opacity-50 scale-95"}`}
+              ${
+                index === activeIndex
+                  ? "bg-white opacity-100 scale-100"
+                  : "bg-gray-100 opacity-50 scale-95"
+              }`}
           >
             <img
               src={member.image}
@@ -72,15 +76,13 @@ export default function TeamCarousel({ members }) {
               className="w-full h-90 object-cover"
             />
             <div className="p-4 text-center">
-              <h3 className="text-lg font-bold text-gray-900">
-                  {member.name}
-                </h3>
-                <Poppins className="text-yellow-500 font-semibold mt-1">
-                  {member.role}
-                </Poppins>
-                <Poppins className="text-gray-500 text-sm mt-2">
-                  {member.bio}
-                </Poppins>
+              <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
+              <Poppins className="text-yellow-500 font-semibold mt-1">
+                {member.role}
+              </Poppins>
+              <Poppins className="text-gray-500 text-sm mt-2">
+                {member.bio}
+              </Poppins>
             </div>
           </div>
         ))}
