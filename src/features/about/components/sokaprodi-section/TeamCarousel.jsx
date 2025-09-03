@@ -17,9 +17,9 @@ export default function TeamCarousel({ members }) {
           centeredSlides={true}
           loop={true}
           loopedSlides={members.length}
-          speed={800}
+          speed={1500}
           autoplay={{
-            delay: 2000,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
           }}

@@ -16,10 +16,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-5xl font-bold text-center text-gray-800 dark:text-white leading-snug"
+          className="text-3xl md:text-5xl font-bold text-center text-gray-800 leading-snug"
         >
           Kuasai Teknologi, Asah Soft Skill, Perkuat Solidaritas <br /> Bersama{" "}
-          <Highlight className="text-black dark:text-white">
+          <Highlight className="text-black">
             <span className="text-white font-bold">HIMTI UMT</span>
           </Highlight>
         </motion.h1>
@@ -28,7 +28,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-4xl text-center"
+          className="mt-6 text-lg md:text-xl text-gray-600 max-w-4xl text-center"
         >
           <Poppins>
             Dukung perjalananmu menuju profesional teknologi dengan solidaritas,
