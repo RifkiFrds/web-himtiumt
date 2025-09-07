@@ -8,6 +8,7 @@ import HomePage from "./features/home/view/HomePage";
 import AboutPage from "./features/about/view/AboutPage";
 import SharingPage from "./features/sharing/views/SharingPage";
 import CommingSoonPage from "./features/display/view/CommingSoonPage";
+import ArtikelPage from "./features/artikel/view/ArtikelPage";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route path="/sharing" element={<SharingPage />} />
 
           {/* Only 3 Page */}
-          <Route path="/artikel" element={<CommingSoonPage />} />
+          <Route path="/artikel" element={<ArtikelPage />} />
           <Route path="/tutorial" element={<CommingSoonPage />} />
           <Route path="/agenda" element={<CommingSoonPage />} />
           <Route path="/dosen" element={<CommingSoonPage />} />
