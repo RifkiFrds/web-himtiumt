@@ -7,7 +7,7 @@ import MainLayout from "./features/layout/view/MainLayout";
 import HomePage from "./features/home/view/HomePage";
 import AboutPage from "./features/about/view/AboutPage";
 import SharingPage from "./features/sharing/views/SharingPage";
-import CommingSoonPage from "./features/display/view/CommingSoonPage";
+import ComingSoonPage from "./features/display/view/ComingSoonPage";
 import ArtikelPage from "./features/artikel/view/ArtikelPage";
 
 function App() {
@@ -22,12 +22,12 @@ function App() {
 
           {/* Only 3 Page */}
           <Route path="/artikel" element={<ArtikelPage />} />
-          <Route path="/tutorial" element={<CommingSoonPage />} />
-          <Route path="/agenda" element={<CommingSoonPage />} />
-          <Route path="/dosen" element={<CommingSoonPage />} />
-          <Route path="/klinik" element={<CommingSoonPage />} />
-          <Route path="/sertifikat" element={<CommingSoonPage />} />
-          <Route path="/pendaftaran" element={<CommingSoonPage />} />
+          <Route path="/tutorial" element={<ComingSoonPage />} />
+          <Route path="/agenda" element={<ComingSoonPage />} />
+          <Route path="/dosen" element={<ComingSoonPage />} />
+          <Route path="/klinik" element={<ComingSoonPage />} />
+          <Route path="/sertifikat" element={<ComingSoonPage />} />
+          <Route path="/pendaftaran" element={<ComingSoonPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
