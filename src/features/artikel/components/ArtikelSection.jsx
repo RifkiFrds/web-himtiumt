@@ -1,6 +1,17 @@
+import { useState } from "react";
 import { Poppins } from "../../../features/global/components/Text/index";
+import { BentoGrid, BentoGridItem } from "../components/BentoGrid";
+import { Tabs } from "../../global/components/Tabs/index";
+import { dataArtikel, tabsData } from "../data/useDataArtikel";
 
 export default function ArtikelSection() {
+  const [activeTab, setActiveTab] = useState(tabsData[0]);
+
+  const filteredArtikels =
+    activeTab.value === "semua"
+      ? dataArtikel
+      : dataArtikel.filter((artikel) => artikel.category === activeTab.value);
+
   return (
     <section className="py-20 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 text-center mb-12">
@@ -11,8 +22,35 @@ export default function ArtikelSection() {
           Jelajahi Artikel Kami
         </h2>
         <Poppins className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
-          Lihat Artikel & Berita Mulai dari tentang teknolgi hingga isu Sosial.
+          Lihat Artikel & Berita Mulai dari Event Kampus hingga tren Teknologi.
         </Poppins>
+      </div>
+
+      {/* Tabs Section */}
+      <div className="mt-12 w-full flex flex-col items-center">
+        <Tabs
+          tabs={tabsData}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          containerClassName="w-full max-w-2xl"
+          activeTabClassName="bg-blue-100"
+        />
+      </div>
+
+      {/* Konten BentoGrid */}
+      <div className="px-4 mt-8">
+        <BentoGrid>
+          {filteredArtikels.map((item) => (
+            <BentoGridItem
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={item.className}
+            />
+          ))}
+        </BentoGrid>
       </div>
     </section>
   );
