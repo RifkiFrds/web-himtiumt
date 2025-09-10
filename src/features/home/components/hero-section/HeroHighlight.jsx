@@ -14,10 +14,7 @@ export const HeroHighlight = ({ children, className, containerClassName }) => {
 
   return (
     <div
-      className={cn(
-        "relative h-full w-full",
-        containerClassName,
-      )}
+      className={cn("relative h-full w-full", containerClassName)}
       onMouseMove={handleMouseMove}
     >
       <div className="absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800 pointer-events-none" />

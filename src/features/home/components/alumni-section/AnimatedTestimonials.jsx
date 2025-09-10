@@ -101,9 +101,7 @@ export const TestimonialsCarousel = ({
                   <div className="text-lg font-bold text-gray-900">
                     {item.name}
                   </div>
-                  <div className="text-sm text-gray-600">
-                    {item.degree}
-                  </div>
+                  <div className="text-sm text-gray-600">{item.degree}</div>
                 </div>
               </div>
               <div className="relative z-20 mt-4">

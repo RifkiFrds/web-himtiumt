@@ -4,10 +4,7 @@ import { cn } from "../../../../lib/utils";
 export const DraggableCard = ({ className, item }) => {
   return (
     <div
-      className={cn(
-        "h-96 w-80 rounded-2xl bg-white p-4 shadow-2xl",
-        className,
-      )}
+      className={cn("h-96 w-80 rounded-2xl bg-white p-4 shadow-2xl", className)}
     >
       <img
         src={item.image}

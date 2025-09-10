@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Poppins } from "../../../global/components/Text";
-import { HimtiTabs } from "./Tabs";
+import { Poppins } from "../../../global/components/Text/index.jsx";
+import { Tabs } from "../../../global/components/Tabs/index.jsx";
 import { MemberCard } from "./MemberCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { himtiStructure } from "../../data/members.js";
@@ -35,7 +35,7 @@ export default function SoHimtiSection() {
       </div>
 
       <div className="mt-12 w-full flex flex-col items-center">
-        <HimtiTabs
+        <Tabs
           tabs={himtiStructure}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
