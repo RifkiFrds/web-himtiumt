@@ -51,7 +51,7 @@ export const dataArtikel = [
       "Pemahaman tentang ekonomi digital dalam era revolusi industri 4.0.",
     longDescription:
       "Penjelasan lengkap penggunaan metode STAR, dengan contoh aplikasi dalam kehidupan sehari-hari mahasiswa.",
-    header: "/images/edukasi/metode-star.jpg",
+    header: "/images/artikel/digital-ekonomi.jpg",
     className: "md:col-span-1",
   },
   {
@@ -62,7 +62,7 @@ export const dataArtikel = [
       "Pemahaman tentang ekonomi digital dalam era revolusi industri 4.0.",
     longDescription:
       "Artikel edukasi tentang pengaruh revolusi industri 4.0, peran e-commerce, fintech, dan digital marketing.",
-    header: "/images/edukasi/ekonomi-digital.jpg",
+    header: "/images/artikel/revolusi-ekonomi.jpg",
     className: "md:col-span-1",
   },
 
@@ -75,7 +75,7 @@ export const dataArtikel = [
       "Update terbaru mengenai kalender akademik dan kegiatan kampus untuk semester ganjil.",
     longDescription:
       "Detail jadwal akademik, tanggal penting, dan kegiatan mahasiswa di semester ganjil.",
-    header: "/images/program/jadwal-akademik.jpg",
+    header: "/images/artikel/jadwal.jpg",
     className: "md:col-span-2",
   },
   {
@@ -86,7 +86,7 @@ export const dataArtikel = [
       "Highlight prestasi dan penghargaan mahasiswa dalam kompetisi tingkat nasional.",
     longDescription:
       "Rangkuman prestasi mahasiswa, lomba yang diikuti, serta tips sukses dari para pemenang.",
-    header: "/images/prestasi/prestasi-mahasiswa.jpg",
+    header: "/images/prestasi/lomba-hackathon.jpg",
     className: "md:col-span-1",
   },
 
@@ -98,7 +98,7 @@ export const dataArtikel = [
     description: "Mengenal tren teknologi yang akan mendominasi di tahun 2025.",
     longDescription:
       "Sepuluh tren teknologi yang diprediksi berkembang pesat, termasuk AI, IoT, dan blockchain.",
-    header: "/images/teknologi/tren-teknologi-2025.jpg",
+    header: "/images/artikel/tech-1.jpg",
     className: "md:col-span-2",
   },
   {
@@ -109,7 +109,7 @@ export const dataArtikel = [
       "Inovasi-inovasi teknologi yang berpotensi mengubah gaya hidup manusia.",
     longDescription:
       "Delapan inovasi teknologi yang merevolusi cara kita bekerja, belajar, dan berinteraksi.",
-    header: "/images/teknologi/inovasi-teknologi.jpg",
+    header: "/images/artikel/tech-2.jpg",
     className: "md:col-span-1",
   },
   {
@@ -120,7 +120,7 @@ export const dataArtikel = [
       "Bahaya penggunaan AI yang tidak terkendali terhadap kesehatan mental.",
     longDescription:
       "Dampak negatif penggunaan AI berlebihan terhadap kesehatan otak manusia, termasuk gangguan tidur dan konsentrasi.",
-    header: "/images/teknologi/ai-dan-kesehatan.jpg",
+    header: "/images/artikel/tech-3.jpg",
     className: "md:col-span-1",
   },
 ];
