@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../../global/components/Button/index";
 import { BookOpen } from "lucide-react";
 import { NavLink } from "react-router-dom";
@@ -180,7 +179,7 @@ function SharingSection() {
               <NavLink to="/tutorial">
                 <Button variant="secondary" size="lg" rounded="full">
                   <div className="flex items-center gap-2 px-4">
-                    <span>Pelajari Modul</span>
+                    <span>Pelajari Materi</span>
                     <BookOpen size={18} />
                   </div>
                 </Button>

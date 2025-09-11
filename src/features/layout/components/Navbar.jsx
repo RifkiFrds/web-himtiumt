@@ -12,7 +12,7 @@ const navLinks = [
   { name: "Artikel", to: "/artikel" },
 ];
 const kegiatanSubMenu = [
-  { name: "Sharing", to: "/sharing" },
+  { name: "Materi", to: "/materi" },
   { name: "Tutorial", to: "/tutorial" },
   { name: "Agenda", to: "/agenda" },
 ];

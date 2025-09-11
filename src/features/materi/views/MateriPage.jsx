@@ -1,11 +1,11 @@
-import SharingSection from "../components/SharingSection";
+import MateriSection from "../components/MateriSection";
 import HeroSection from "../components/HeroSection";
 
 function SharingPage() {
   return (
     <>
       <HeroSection />
-      <SharingSection />
+      <MateriSection />
     </>
   );
 }

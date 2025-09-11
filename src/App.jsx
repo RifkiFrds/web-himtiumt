@@ -6,7 +6,7 @@ import ScrollToTop from "./features/global/components/ScrollToTop/index";
 import MainLayout from "./features/layout/view/MainLayout";
 import HomePage from "./features/home/view/HomePage";
 import AboutPage from "./features/about/view/AboutPage";
-import SharingPage from "./features/sharing/views/SharingPage";
+import MateriPage from "./features/materi/views/MateriPage";
 import ComingSoonPage from "./features/display/view/ComingSoonPage";
 import ArtikelPage from "./features/artikel/view/ArtikelPage";
 import ArticleDetailPage from "./features/artikel/components/ArticleDetailPage";
@@ -19,7 +19,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/tentang" element={<AboutPage />} />
-          <Route path="/sharing" element={<SharingPage />} />
+          <Route path="/materi" element={<MateriPage />} />
           <Route path="/artikel" element={<ArtikelPage />} />
 
           {/* detail page artikel  */}

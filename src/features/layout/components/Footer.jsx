@@ -91,10 +91,10 @@ export default function ModernFooter() {
             </Poppins>
             <nav className="mt-4 space-y-3">
               <Link
-                to="/sharing"
+                to="/materi"
                 className="block text-gray-100 hover:text-black"
               >
-                Sharing
+                Materi
               </Link>
               <Link
                 to="/tutorial"
