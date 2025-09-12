@@ -10,6 +10,7 @@ import MateriPage from "./features/materi/views/MateriPage";
 import ComingSoonPage from "./features/display/view/ComingSoonPage";
 import ArtikelPage from "./features/artikel/view/ArtikelPage";
 import ArticleDetailPage from "./features/artikel/components/ArticleDetailPage";
+import TutorialPage from "./features/tutorial/view/TutorialPage";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           {/* detail page artikel  */}
           <Route path="/artikel/:id" element={<ArticleDetailPage />} />
 
-          <Route path="/tutorial" element={<ComingSoonPage />} />
+          <Route path="/tutorial" element={<TutorialPage />} />
           <Route path="/agenda" element={<ComingSoonPage />} />
           <Route path="/dosen" element={<ComingSoonPage />} />
           <Route path="/klinik" element={<ComingSoonPage />} />
