@@ -11,6 +11,7 @@ import ComingSoonPage from "./features/display/view/ComingSoonPage";
 import ArtikelPage from "./features/artikel/view/ArtikelPage";
 import ArticleDetailPage from "./features/artikel/components/ArticleDetailPage";
 import TutorialPage from "./features/tutorial/view/TutorialPage";
+import TutorialDetailPage from "./features/tutorial/view/TutorialDetailPage";
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
           <Route path="/artikel/:id" element={<ArticleDetailPage />} />
 
           <Route path="/tutorial" element={<TutorialPage />} />
+          
+          {/* detail page tutorial */}
+          <Route path="/tutorial/:id" element={<TutorialDetailPage />} />
+
           <Route path="/agenda" element={<ComingSoonPage />} />
           <Route path="/dosen" element={<ComingSoonPage />} />
           <Route path="/klinik" element={<ComingSoonPage />} />
