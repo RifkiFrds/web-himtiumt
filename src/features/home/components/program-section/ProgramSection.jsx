@@ -15,7 +15,7 @@ const programContent = [
           modern seperti React.js dan TailwindCSS.
         </p>
         <div className="mt-4">
-          <NavLink to="/sharing">
+          <NavLink to="/materi">
             <Button variant="secondary" size="md" rounded="full">
               <div className="flex items-center gap-2 px-2">
                 <span className="whitespace-nowrap">Pelajari Lebih Lanjut</span>
@@ -47,7 +47,7 @@ const programContent = [
           untuk Android dan iOS.
         </p>
         <div className="mt-4">
-          <NavLink to="/sharing">
+          <NavLink to="/materi">
             <Button variant="secondary" size="md" rounded="full">
               <div className="flex items-center gap-2 px-2">
                 <span className="whitespace-nowrap">Pelajari Lebih Lanjut</span>
@@ -79,7 +79,7 @@ const programContent = [
           dari riset hingga prototipe dengan Figma.
         </p>
         <div className="mt-4">
-          <NavLink to="/sharing">
+          <NavLink to="/materi">
             <Button variant="secondary" size="md" rounded="full">
               <div className="flex items-center gap-2 px-2">
                 <span className="whitespace-nowrap">Pelajari Lebih Lanjut</span>
@@ -111,7 +111,7 @@ const programContent = [
           pemahaman anggota HIMTI dalam menghadapi ancaman siber.
         </p>
         <div className="mt-4">
-          <NavLink to="/sharing">
+          <NavLink to="/materi">
             <Button variant="secondary" size="md" rounded="full">
               <div className="flex items-center gap-2 px-2">
                 <span className="whitespace-nowrap">Pelajari Lebih Lanjut</span>
