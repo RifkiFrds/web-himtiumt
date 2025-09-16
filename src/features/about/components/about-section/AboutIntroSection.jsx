@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Poppins } from "../../../global/components/Text";
+import { Poppins } from "../../../../components/ui/Text";
 import { Cover } from "./Cover";
 import { motion } from "framer-motion";
 import { DraggableCard } from "./DraggableCard";
