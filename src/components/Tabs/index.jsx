@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../lib/utils";
 
 export const Tabs = ({
   tabs,

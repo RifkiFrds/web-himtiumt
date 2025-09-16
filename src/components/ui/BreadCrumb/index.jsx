@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
-import { Eachable } from "../Eachable";
+import { Eachable } from "../../Eachable";
 import { Poppins } from "../Text";
 
 export const BreadCrumb = ({ items, icon }) => {

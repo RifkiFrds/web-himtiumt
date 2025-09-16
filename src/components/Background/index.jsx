@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
-"use client";
-
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../lib/utils";
 
 // Grid Background Component
 export const GridBackground = ({
