@@ -1,4 +1,4 @@
-import { StatusDisplay } from "../../global/components/StatusDisplay";
+import { StatusDisplay } from "../../../components/StatusDisplay";
 import comingSoonAnimation from "../../../core/assets/lottie-.json";
 
 export default function DivisiPage() {

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Poppins } from "../../../global/components/Text";
+import { Poppins } from "../../../../components/ui/Text";
 import { motion } from "framer-motion";
 import { Linkedin, Instagram, Github } from "lucide-react";
 

@@ -1,5 +1,5 @@
 import { TestimonialsCarousel } from "./AnimatedTestimonials";
-import { Poppins } from "../../../global/components/Text/index";
+import { Poppins } from "../../../../components/ui/Text";
 
 export default function AlumniSection() {
   return (

@@ -1,6 +1,6 @@
 import { StickyScroll } from "./StickyScrollReveal";
-import { Poppins } from "../../../global/components/Text";
-import { Button } from "../../../global/components/Button";
+import { Poppins } from "../../../../components/ui/Text";
+import { Button } from "../../../../components/ui/Button";
 import { NavLink } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 

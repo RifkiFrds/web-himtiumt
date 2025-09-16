@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { dataArtikel } from "../data/useDataArtikel";
-import { Poppins } from "../../global/components/Text";
+import { Poppins } from "../../../components/ui/Text";
 
 export default function ArticleDetailPage() {
   const { id } = useParams();

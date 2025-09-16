@@ -1,5 +1,5 @@
 import TeamCarousel from "./TeamCarousel";
-import { Poppins } from "../../../global/components/Text";
+import { Poppins } from "../../../../components/ui/Text";
 
 // Data dosen/kaprodi
 const teamMembers = [

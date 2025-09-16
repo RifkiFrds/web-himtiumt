@@ -1,7 +1,8 @@
-import { Poppins } from "../../../global/components/Text";
+import logoHifest from "../../../../core/assets/images/hifest-logo.png";
+import { Poppins } from "../../../../components/ui/Text";
 import { ScrollingBanner } from "./ScrollingBanner";
 import { Tv, Palette, Trophy, Gamepad2, ArrowRight } from "lucide-react";
-import { Button } from "../../../global/components/Button";
+import { Button } from "../../../../components/ui/Button";
 import { Link } from "react-router";
 
 export default function BannerSection() {
@@ -10,7 +11,7 @@ export default function BannerSection() {
       <div className="flex items-center gap-2">
         <div className="bg-white rounded-full p-1 flex items-center justify-center">
           <img
-            src="/images/hifest-logo.png"
+            src={ logoHifest} 
             alt="hifest-logo"
             className="h-9 w-9 object-contain"
           />

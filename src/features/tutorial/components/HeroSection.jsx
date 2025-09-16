@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import { Poppins } from "../../global/components/Text";
-import { PlaceholdersAndVanishInput } from "../../global/components/Placeholder"; 
+import { Poppins } from "../../../components/ui/Text";
+import { PlaceholdersAndVanishInput } from "../../../components/Placeholder"; 
 
 export default function HeroSection({ onSearchChange, onSearchSubmit }) {
   const placeholders = [

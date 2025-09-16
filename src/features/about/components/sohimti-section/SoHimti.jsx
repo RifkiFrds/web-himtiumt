@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Poppins } from "../../../global/components/Text/index.jsx";
-import { Tabs } from "../../../global/components/Tabs/index.jsx";
+import { Poppins } from "../../../../components/ui/Text";
+import { Tabs } from "../../../../components/Tabs";
 import { MemberCard } from "./MemberCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { himtiStructure } from "../../data/members.js";

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Poppins } from "../../../features/global/components/Text/index";
+import { Poppins } from "../../../components/ui/Text";
 import { BentoGrid, BentoGridItem } from "../components/BentoGrid";
-import { Tabs } from "../../global/components/Tabs/index";
+import { Tabs } from "../../../components/Tabs";
 import { dataArtikel, tabsData } from "../data/useDataArtikel";
 
 export default function ArtikelSection() {

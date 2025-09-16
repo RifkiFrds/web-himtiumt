@@ -1,5 +1,5 @@
 import { ParallaxScroll } from "./ParallaxScroll";
-import { Poppins } from "../../../global/components/Text";
+import { Poppins } from "../../../../components/ui/Text";
 
 export default function PrestasiSection() {
   return (

@@ -2,7 +2,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "../../../../lib/utils";
-import { Poppins } from "../../../global/components/Text";
+import { Poppins } from "../../../../components/ui/Text";
 import { ArrowUpRight } from "lucide-react";
 
 // Komponen Card dalam grid

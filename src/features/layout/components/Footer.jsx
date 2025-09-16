@@ -1,7 +1,9 @@
-import { Poppins } from "../../global/components/Text";
+import { Poppins } from "../../../components/ui/Text";
 import { Mail, Instagram, YoutubeIcon, LucideLinkedin } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../../../../public/images/himti-logo.png";
+import logoHimti from "../../../core/assets/images/himti-logo.png";
+import buttonPlaystore from "../../../core/assets/images/button-playstore.png";
+import buttonAppstore  from "../../../core/assets/images/button-appstore.png";
 
 export default function ModernFooter() {
   // Url HIMTI Apps
@@ -15,7 +17,7 @@ export default function ModernFooter() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8">
           <div className="md:col-span-4 lg:col-span-3 space-y-4">
             <div className="flex items-center gap-2">
-              <img src={logo} alt="HIMTI" className="h-10" />
+              <img src={logoHimti} alt="HIMTI" className="h-10" />
               <Poppins className="text-xl font-bold text-white">
                 HIMTI UMT
               </Poppins>
@@ -147,7 +149,7 @@ export default function ModernFooter() {
                 className="transition-transform hover:scale-105"
               >
                 <img
-                  src="/images/button-playstore.png"
+                  src={buttonPlaystore}
                   alt="Get it on Google Play"
                   target="_blank"
                   className="h-14"
@@ -158,7 +160,7 @@ export default function ModernFooter() {
                 className="transition-transform hover:scale-105"
               >
                 <img
-                  src="/images/button-appstore.png"
+                  src={buttonAppstore}
                   alt="Download on the App Store"
                   target="_blank"
                   className="h-14"

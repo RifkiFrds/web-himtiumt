@@ -1,4 +1,4 @@
-import { Button } from "../../global/components/Button/index";
+import { Button } from "../../../components/ui/Button";
 import { BookOpen } from "lucide-react";
 import { NavLink } from "react-router-dom";
 

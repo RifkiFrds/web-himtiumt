@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { Poppins } from "../../../global/components/Text/index";
+import { Poppins } from "../../../../components/ui/Text";
 import "swiper/css";
 
 export default function TeamCarousel({ members }) {

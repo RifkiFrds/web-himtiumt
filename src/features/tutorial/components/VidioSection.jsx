@@ -4,7 +4,8 @@ import {
   CardContainer,
   CardBody,
   CardItem,
-} from "../../global/components/3DCard"; 
+} from "../../../components/3DCard"; 
+import { Poppins } from "../../../components/ui/Text";
 
 export default function VidioSection({ tutorials }) {
   return (
@@ -50,9 +51,9 @@ export default function VidioSection({ tutorials }) {
             </CardContainer>
           ))
         ) : (
-          <p className="text-center col-span-full text-gray-500">
+          <Poppins className="text-center col-span-full text-gray-600">
             Tutorial tidak ditemukan.
-          </p>
+          </Poppins>
         )}
       </div>
     </section>

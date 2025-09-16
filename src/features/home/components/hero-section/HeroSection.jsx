@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./HeroHighlight";
-import { Button } from "../../../global/components/Button";
+import { Button } from "../../../../components/ui/Button";
 import { ArrowRight, BookOpen } from "lucide-react";
-import { Poppins } from "../../../global/components/Text/index";
+import { Poppins } from "../../../../components/ui/Text";
 import { Link } from "react-router";
 
 export default function HeroSection() {

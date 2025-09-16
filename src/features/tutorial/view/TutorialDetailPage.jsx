@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { dataTutorial } from "../data/useDataTutorial";
-import { Poppins } from "../../global/components/Text";
-import Shimmer  from "../../global/components/Shimmer/index";
+import { Poppins } from "../../../components/ui/Text";
+import Shimmer  from "../../../components/Shimmer";
 
 export default function TutorialDetailPage() {
   const { id } = useParams();

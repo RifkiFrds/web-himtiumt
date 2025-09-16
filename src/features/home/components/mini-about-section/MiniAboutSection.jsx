@@ -1,7 +1,7 @@
 import RotatingText from "./RotatingText";
 import ImageReveal from "./ImageReveal";
-import { Poppins } from "../../../global/components/Text/index";
-import { Button } from "../../../global/components/Button";
+import { Poppins } from "../../../../components/ui/Text";
+import { Button } from "../../../../components/ui/Button";
 import { NavLink } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
