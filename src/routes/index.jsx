@@ -8,6 +8,8 @@ import ArtikelPage from "../features/artikel/view/ArtikelPage";
 import ArticleDetailPage from "../features/artikel/components/ArticleDetailPage";
 import TutorialPage from "../features/tutorial/view/TutorialPage";
 import TutorialDetailPage from "../features/tutorial/view/TutorialDetailPage";
+import AgendaPage from "../features/agenda/view/AgendaPage";
+import DosenPage from "../features/dosen/view/DosenPage";
 
 export default function AppRoutes() {
   return (
@@ -26,8 +28,8 @@ export default function AppRoutes() {
           {/* detail page tutorial */}
           <Route path="/tutorial/:id" element={<TutorialDetailPage />} />
 
-          <Route path="/agenda" element={<ComingSoonPage />} />
-          <Route path="/dosen" element={<ComingSoonPage />} />
+          <Route path="/agenda" element={<AgendaPage />} />
+          <Route path="/dosen" element={<DosenPage />} />
           <Route path="/klinik" element={<ComingSoonPage />} />
           <Route path="/sertifikat" element={<ComingSoonPage />} />
           <Route path="/pendaftaran" element={<ComingSoonPage />} />
