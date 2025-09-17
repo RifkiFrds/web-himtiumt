@@ -9,7 +9,7 @@ import { Poppins } from "../../../components/ui/Text";
 
 export default function VidioSection({ tutorials }) {
   return (
-    <section className="pb-5 px-4">
+    <section className="pb-5 px-4 animate-fade-in-up">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
         {tutorials.length > 0 ? (
           tutorials.map((tutorial) => (

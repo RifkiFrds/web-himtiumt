@@ -3,9 +3,9 @@ function HeroSection() {
     <section className="pt-24 animate-fade-in-up">
       <div className="px-12 mx-auto max-w-7xl">
         <div className="w-full mx-auto md:w-11/12 xl:w-9/12 text-center">
-          <h1 className="mb-8 text-4xl font-bold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+          <h1 className="mb-8 text-4xl md:text-5xl font-bold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
             <span>Upgrade Skill</span>{" "}
-            <span className="block w-full py-2 text-transparent bg-clip-text leading-[3rem] bg-gradient-to-r from-yellow-400 to-blue-800 text-center lg:inline">
+            <span className=" py-2 text-transparent bg-clip-text leading-[2.5rem] sm:leading-[3rem] bg-gradient-to-r from-yellow-400 to-blue-800 text-center lg:inline">
               Bangun Relasi
             </span>{" "}
             <span>Raih Masa Depan</span>

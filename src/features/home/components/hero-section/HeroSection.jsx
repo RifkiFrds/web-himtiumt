@@ -57,7 +57,7 @@ export default function HeroSection() {
               <Button variant="secondary" size="lg" rounded="full">
                 <div className="flex items-center justify-center gap-2 px-4">
                   <BookOpen size={18} />
-                  <Link to="/sharing">Lihat Kegiatan</Link>
+                  <Link to="/agenda">Lihat Kegiatan</Link>
                 </div>
               </Button>
             </div>

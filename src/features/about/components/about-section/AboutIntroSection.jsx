@@ -38,13 +38,10 @@ export default function AboutIntroSection() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col space-y-6 text-center lg:text-left items-center lg:items-start"
-        >
-          <h1 className="text-3xl md:text-5xl font-bold">
+        
+        {/* --- Kolom Kiri Teks --- */}
+        <div className="flex flex-col space-y-6 text-center lg:text-left items-center lg:items-start animate-fade-in-up">
+          <h1 className="text-4xl md:text-5xl font-bold">
             Our Story <Cover>About HIMTI</Cover>
           </h1>
 
@@ -67,12 +64,12 @@ export default function AboutIntroSection() {
               berkontribusi dalam menghadapi tantangan teknologi masa kini.
             </Poppins>
           </div>
-        </motion.div>
+        </div>
 
         {/* --- Kolom Kanan Card--- */}
         <div
           ref={constraintsRef}
-          className="relative w-full h-[450px] flex items-center justify-center"
+          className="relative w-full h-[450px] flex items-center justify-center animate-fade-in-up"
         >
           {cards.map((item, index) => (
             <motion.div

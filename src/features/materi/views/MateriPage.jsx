@@ -1,7 +1,7 @@
 import MateriSection from "../components/MateriSection";
 import HeroSection from "../components/HeroSection";
 
-function SharingPage() {
+export default function SharingPage() {
   return (
     <>
       <HeroSection />
@@ -10,4 +10,4 @@ function SharingPage() {
   );
 }
 
-export default SharingPage;
+
