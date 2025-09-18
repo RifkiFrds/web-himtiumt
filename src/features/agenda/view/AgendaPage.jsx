@@ -1,9 +1,39 @@
-import AgendaSection from "../components/AgendaSection";
+import React from 'react';
+import { useAgenda } from '../hooks/useAgenda'; 
+import AgendaSection from '../components/AgendaSection';
+import LoadingStatus from '../../../components/LoadingStatus'; 
+import ErrorStatus from '../../../components/ErrorStatus';
+import { StatusDisplay } from '../../../components/StatusDisplay';
 
-export default function AgendaPage() {
+const AgendaPage = () => {
+  // Panggil state dan fungsi
+  const {
+    loading,
+    error,
+    upcomingEvents,
+    finishedEvents,
+    fetchAcara,
+  } = useAgenda();
+
+  //  UI berdasarkan state dari hook
+  if (loading) {
+    return <LoadingStatus />; 
+  }
+
+  if (error) {
+    return <ErrorStatus message={error} onRetry={fetchAcara} />;
+  }
+
+  if (upcomingEvents.length === 0 && finishedEvents.length === 0) {
+    return <StatusDisplay message="Saat ini belum ada data kegiatan." />
+  }
+
   return (
-    <div>
-      <AgendaSection />
-    </div>
+    <AgendaSection
+      upcomingEvents={upcomingEvents}
+      finishedEvents={finishedEvents}
+    />
   );
-}
+};
+
+export default AgendaPage;
