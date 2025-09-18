@@ -10,6 +10,7 @@ import TutorialPage from "../features/tutorial/view/TutorialPage";
 import TutorialDetailPage from "../features/tutorial/view/TutorialDetailPage";
 import AgendaPage from "../features/agenda/view/AgendaPage";
 import DosenPage from "../features/dosen/view/DosenPage";
+import KlinikPage from "../features/klinik/view/KlinikPage";
 
 export default function AppRoutes() {
   return (
@@ -30,7 +31,7 @@ export default function AppRoutes() {
 
           <Route path="/agenda" element={<AgendaPage />} />
           <Route path="/dosen" element={<DosenPage />} />
-          <Route path="/klinik" element={<ComingSoonPage />} />
+          <Route path="/klinik" element={<KlinikPage />} />
           <Route path="/sertifikat" element={<ComingSoonPage />} />
           <Route path="/pendaftaran" element={<ComingSoonPage />} />
         </Route>
