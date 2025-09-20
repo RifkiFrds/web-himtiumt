@@ -2,27 +2,29 @@ import { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { MoveUpRight as ArrowIcon } from "lucide-react";
 import { Poppins } from "../../../../components/ui/Text";
+import { Link } from "react-router-dom";
 
+// Updated data to be more relevant
 const visualData = [
   {
     key: 1,
     url: "/images/bootcamp/himti-bootcamp21.jpg",
-    label: "HIMTI Bootcamp 2021",
+    label: "Galeri Angkatan 2021",
   },
   {
     key: 2,
     url: "/images/bootcamp/himti-bootcamp22.jpg",
-    label: "HIMTI Bootcamp 2022",
+    label: "Galeri Angkatan 2022",
   },
   {
     key: 3,
     url: "/images/bootcamp/himti-bootcamp23.jpg",
-    label: "HIMTI Bootcamp 2023",
+    label: "Galeri Angkatan 2023",
   },
   {
     key: 4,
     url: "/images/bootcamp/himti-bootcamp24.jpg",
-    label: "HIMTI Bootcamp 2024",
+    label: "Galeri Angkatan 2024",
   },
 ];
 
@@ -64,7 +66,8 @@ export default function ImageReveal() {
       onMouseLeave={onHoverDeactivate}
     >
       {visualData.map((item) => (
-        <div
+        <Link
+          to="/tentang#angkatan-gallery" // Points to the About page and a specific section
           key={item.key}
           className="p-2 cursor-pointer relative sm:flex items-center justify-between"
           onMouseEnter={() => onHoverActivate(item)}
@@ -103,10 +106,10 @@ export default function ImageReveal() {
               focusedItem?.key === item.key ? "w-full" : "w-0"
             }`}
           />
-        </div>
+        </Link>
       ))}
 
-      {/* gambar preview  */}
+      {/* gambar preview */}
       {isLargeScreen && focusedItem && (
         <motion.img
           src={focusedItem.url}

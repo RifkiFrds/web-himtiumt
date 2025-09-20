@@ -3,6 +3,7 @@ import SoHimtiSection from "../components/sohimti-section/SoHimti";
 import SoProdiSection from "../components/sokaprodi-section/SoProdiSection";
 import VisiMisiSection from "../components/visimission-section/VisiMisionSection";
 import ContactSection from "../components/contact-section/ContactSection";
+import AngkatanSection from "../components/angakatan-section/AngkatanSection";
 
 export default function AboutPage() {
   return (
@@ -11,6 +12,7 @@ export default function AboutPage() {
       <SoProdiSection />
       <SoHimtiSection />
       <VisiMisiSection />
+      <AngkatanSection />
       <ContactSection />
     </>
   );
