@@ -1,42 +1,48 @@
 import { useState } from "react";
 import { Poppins } from "../../../components/ui/Text";
-import { dataDosen } from "../data/useDataDosen";
 import { PlaceholdersAndVanishInput } from "../../../components/Placeholder";
 import { HoverEffect } from "./DosenCard";
+import { useDosen } from "../hooks/useDosen";
+import LoadingStatus from "../../../components/LoadingStatus";
+import ErrorStatus from "../../../components/ErrorStatus";
 
 export default function DosenSection() {
+  const { loading, error, dosen, fetchDosen } = useDosen();
   const [searchTerm, setSearchTerm] = useState("");
+  
   const placeholders = [
     "Cari nama dosen...",
     "Siapa Kaprodi Teknik Informatika?",
     "Cari dosen pembina HIMTI...",
   ];
 
-  const filteredDosen = dataDosen.filter((dosen) =>
+  const filteredDosen = dosen.filter((dosen) =>
     dosen.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    dosen.title.toLowerCase().includes(searchTerm.toLowerCase())
+    (dosen.title && dosen.title.toLowerCase().includes(searchTerm.toLowerCase()))
   );
-  
-  // Adaptasi data untuk HoverEffect
-  const itemsForHoverEffect = filteredDosen.map(dosen => ({
-    name: dosen.name,
-    title: dosen.title,
-    nidn: dosen.nidn,
-    image: dosen.image,
-    birth: dosen.birth,          
-    description: dosen.description,
-  }));
+
+  if (loading) {
+    return <LoadingStatus message="Memuat data dosen..." />;
+  }
+
+  if (error) {
+    return <ErrorStatus message={error} onRetry={fetchDosen} />;
+  }
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 ">
       <div className="max-w-7xl mx-auto px-4">
         {/* Judul Section */}
-        <div className="text-center mb-12 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-            Staf <span className="text-blue-600">Pengajar</span>
-          </h2>
-          <Poppins className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
-            Kenali lebih dekat para dosen ahli dan berdedikasi di program studi Teknik Informatika.
+        <div className="w-full mx-auto text-center mb-16">
+          <h1 className="mb-6 text-4xl md:text-5xl font-bold leading-tight tracking-tight text-gray-900">
+            Mengenal Para
+            <span className="py-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-blue-800 lg:inline">
+              {" "}Staf Pengajar{" "}
+            </span>
+            Teknik Informatika
+          </h1>
+          <Poppins className="px-0 mb-8 text-lg text-gray-600 md:text-xl max-w-3xl mx-auto">
+            Kenali lebih dekat para dosen ahli dan berdedikasi yang menjadi tulang punggung di program studi Teknik Informatika UMT.
           </Poppins>
         </div>
 
@@ -49,11 +55,10 @@ export default function DosenSection() {
           />
         </div>
 
-        {/* Grid Kartu Dosen */}
-        <HoverEffect items={itemsForHoverEffect} />
-        
-        {/* Pesan jika tidak ada hasil */}
-        {filteredDosen.length === 0 && (
+        {/* Grid Card Dosen */}
+        {filteredDosen.length > 0 ? (
+          <HoverEffect items={filteredDosen} />
+        ) : (
           <div className="text-center col-span-full mt-8">
             <Poppins className="text-gray-500">Dosen tidak ditemukan.</Poppins>
           </div>

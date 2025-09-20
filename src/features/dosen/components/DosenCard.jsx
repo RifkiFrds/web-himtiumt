@@ -1,62 +1,23 @@
 /* eslint-disable react/prop-types */
-import { cn } from "../../../lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Poppins } from "../../../components/ui/Text";
+import { cn } from "../../../lib/utils";
+import { Mail, Phone } from "lucide-react";
 
-// Komponen Card dosen
-export const ProfileCard = ({ className, children, image }) => {
-  return (
-    <div
-      className={cn(
-        "rounded-xl h-full w-full overflow-hidden bg-white border border-slate-200 group-hover:border-blue-500 relative z-20 shadow-sm",
-        className
-      )}
-    >
-      <img
-        src={image}
-        alt="profile"
-        className="w-full h-58 object-cover"
-      />
-      <div className="p-4">{children}</div>
-    </div>
-  );
-};
-
-export const CardTitle = ({ className, children }) => {
-  return (
-    <h4 className={cn("text-gray-900 font-bold tracking-wide text-lg", className)}>
-      {children}
-    </h4>
-  );
-};
-
-export const CardDescription = ({ className, children }) => {
-  return (
-    <p
-      className={cn(
-        "mt-1 text-blue-600 font-semibold tracking-wide leading-relaxed text-sm",
-        className
-      )}
-    >
-      {children}
-    </p>
-  );
-};
-
-// Komponen utama
 export const HoverEffect = ({ items, className }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <div
       className={cn(
-        "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
         className
       )}
     >
       {items.map((item, idx) => (
         <div
-          key={idx}
+          key={item?.id}
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -64,7 +25,7 @@ export const HoverEffect = ({ items, className }) => {
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-slate-100 block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-gradient-to-br from-yellow-400/80 to-blue-600/80 block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -78,24 +39,58 @@ export const HoverEffect = ({ items, className }) => {
               />
             )}
           </AnimatePresence>
-          <ProfileCard image={item.image}>
-            <CardTitle>{item.name}</CardTitle>
-            <CardDescription>{item.title}</CardDescription>
-            
-            <div className="text-left mt-4 pt-3 border-t border-gray-200 space-y-2">
-              <p className="text-xs text-gray-600">
-                <span className="font-semibold">NIDN:</span> {item.nidn}
-              </p>
-              <p className="text-xs text-gray-600">
-                <span className="font-semibold">Lahir:</span> {item.birth}
-              </p>
-              <p className="text-xs text-gray-500 italic mt-2">
-                &quot;{item.description}&quot;
-              </p>
-            </div>
-          </ProfileCard>
+          <Card item={item} />
         </div>
       ))}
+    </div>
+  );
+};
+
+export const Card = ({ item }) => {
+  // Fungsi untuk membuat link WhatsApp 
+  const createWhatsAppLink = (phone) => {
+    if (!phone) return '#';
+    const cleanedPhone = phone.replace(/[^0-9]/g, '');
+    return `https://wa.me/${cleanedPhone}`;
+  }
+
+  return (
+    <div className="rounded-2xl h-full w-full p-4 overflow-hidden bg-white border border-gray-200 group-hover:border-transparent relative z-20 transition-shadow duration-300">
+      <div className="relative z-50">
+        <img
+          src={item.image}
+          alt={item.name}
+          className="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h4 className="text-gray-900 font-bold tracking-wide mt-2 text-lg">
+          {item.name}
+        </h4>
+        <Poppins className="text-gray-500 text-sm">{item.title}</Poppins>
+        <Poppins className="mt-2 text-xs text-gray-400">NIDN: {item.nidn}</Poppins>
+        
+        <div className="mt-4 pt-4 border-t border-gray-100 space-y-2">
+          {item.email && (
+            <a 
+              href={`mailto:${item.email}`} 
+              className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              <Mail size={14} />
+              <span>{item.email}</span>
+            </a>
+          )}
+          {item.phone && (
+            <a 
+              href={createWhatsAppLink(item.phone)} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
+            >
+              <Phone size={14} />
+              <span>{item.phone}</span>
+            </a>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
