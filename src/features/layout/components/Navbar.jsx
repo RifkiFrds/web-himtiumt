@@ -14,6 +14,7 @@ const navLinks = [
 ];
 const kegiatanSubMenu = [
   { name: "Materi", to: "/materi" },
+  { name: "Anggota", to: "/angkatan"},
   { name: "Tutorial", to: "/tutorial" },
   { name: "Agenda", to: "/agenda" },
 ];
