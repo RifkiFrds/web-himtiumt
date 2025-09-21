@@ -1,27 +1,21 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 import { Poppins } from "../../../../components/ui/Text";
-import { Tabs } from "../../../../components/Tabs";
-import { MemberCard } from "./MemberCard";
-import { motion, AnimatePresence } from "framer-motion";
-import { himtiStructure } from "../../data/members.js";
+import { useStruktural } from "../../../struktural/hooks/useStruktural";
+import LoadingStatus from "../../../../components/LoadingStatus";
+import ErrorStatus from "../../../../components/ErrorStatus";
+// 1. Import komponen dari file terpisah
+import { StrukturalCard } from "./StrukturalCard"; 
 
 export default function SoHimtiSection() {
-  const [activeTab, setActiveTab] = useState(himtiStructure[0]);
+  const { loading, error, topTwo, middleFour, bottomFour } = useStruktural();
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  if (loading) return <LoadingStatus message="Memuat data struktural..." />;
+  if (error) return <ErrorStatus message={error} />;
 
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <Poppins className="text-white font-semibold bg-gradient-to-r from-[#4C76A3] to-[#203D5D] px-6 py-2 rounded-full px-4 py-1 tracking-wider uppercase text-sm mx-auto text-center w-fit">
+        <Poppins className="text-white font-semibold bg-gradient-to-r from-[#4C76A3] to-[#203D5D] px-6 py-2 rounded-full tracking-wider uppercase text-sm mx-auto w-fit">
           HIMTI Leadership
         </Poppins>
         <h2 className="mt-2 text-4xl md:text-5xl font-bold text-gray-900">
@@ -34,31 +28,26 @@ export default function SoHimtiSection() {
         </Poppins>
       </div>
 
-      <div className="mt-12 w-full flex flex-col items-center">
-        <Tabs
-          tabs={himtiStructure}
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-          containerClassName="w-full max-w-2xl"
-          activeTabClassName="bg-blue-100"
-        />
-      </div>
+      <div className="mt-16 max-w-5xl mx-auto px-4 flex flex-col items-center space-y-8">
+        {/* Baris Atas (Formasi 2) dengan penyesuaian ukuran */}
+        <div className="w-full flex justify-center gap-6">
+          {topTwo.map(member => (
+            // 2. Buat kartu sedikit lebih kecil dari 50% lebar
+            <div key={member.id} className="w-full ">
+              <StrukturalCard member={member} />
+            </div>
+          ))}
+        </div>
 
-      <div className="mt-12 max-w-7xl mx-auto px-4">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab.value}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-          >
-            {activeTab.members.map((member, index) => (
-              <MemberCard key={index} data={member} />
-            ))}
-          </motion.div>
-        </AnimatePresence>
+        {/* Baris Tengah (Formasi 4) */}
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6">
+          {middleFour.map(member => <StrukturalCard key={member.id} member={member} />)}
+        </div>
+
+        {/* Baris Bawah (Formasi 4) */}
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6">
+          {bottomFour.map(member => <StrukturalCard key={member.id} member={member} />)}
+        </div>
       </div>
     </section>
   );
