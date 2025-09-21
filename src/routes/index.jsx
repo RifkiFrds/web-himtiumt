@@ -3,6 +3,9 @@ import MainLayout from "../features/layout/view/MainLayout";
 import HomePage from "../features/home/view/HomePage";
 import AboutPage from "../features/about/view/AboutPage";
 import MateriPage from "../features/materi/views/MateriPage";
+
+import AngkatanPage from "../features/angkatan/view/AngkatanPage";
+
 import ComingSoonPage from "../features/display/view/ComingSoonPage";
 import ArtikelPage from "../features/artikel/view/ArtikelPage";
 import ArticleDetailPage from "../features/artikel/components/ArticleDetailPage";
@@ -19,6 +22,7 @@ export default function AppRoutes() {
           <Route path="/" element={<HomePage />} />
           <Route path="/tentang" element={<AboutPage />} />
           <Route path="/materi" element={<MateriPage />} />
+          <Route path="/angkatan" element={<AngkatanPage />} />
           <Route path="/artikel" element={<ArtikelPage />} />
 
           {/* detail page artikel  */}
