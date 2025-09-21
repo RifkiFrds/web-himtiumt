@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Poppins } from "../../../components/ui/Text";
 import { PlaceholdersAndVanishInput } from "../../../components/Placeholder";
-import { HoverEffect } from "./DosenCard";
 import { useDosen } from "../hooks/useDosen";
 import LoadingStatus from "../../../components/LoadingStatus";
 import ErrorStatus from "../../../components/ErrorStatus";
+import { HoverEffect } from "../../../components/HoverEffect";
+import { DosenCard } from "./DosenCard";
 
 export default function DosenSection() {
   const { loading, error, dosen, fetchDosen } = useDosen();
@@ -30,9 +31,8 @@ export default function DosenSection() {
   }
 
   return (
-    <section className="py-20 ">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Judul Section */}
         <div className="w-full mx-auto text-center mb-16">
           <h1 className="mb-6 text-4xl md:text-5xl font-bold leading-tight tracking-tight text-gray-900">
             Mengenal Para
@@ -46,7 +46,6 @@ export default function DosenSection() {
           </Poppins>
         </div>
 
-        {/* Search Input */}
         <div className="w-full max-w-xl mx-auto mb-16">
           <PlaceholdersAndVanishInput
             placeholders={placeholders}
@@ -55,9 +54,11 @@ export default function DosenSection() {
           />
         </div>
 
-        {/* Grid Card Dosen */}
+        {/* HoverEffect */}
         {filteredDosen.length > 0 ? (
-          <HoverEffect items={filteredDosen} />
+          <HoverEffect items={filteredDosen}>
+            {(item) => <DosenCard item={item} />}
+          </HoverEffect>
         ) : (
           <div className="text-center col-span-full mt-8">
             <Poppins className="text-gray-500">Dosen tidak ditemukan.</Poppins>
