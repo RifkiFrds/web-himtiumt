@@ -1,83 +1,100 @@
-import { useState } from 'react';
 import { Button } from '../../../components/ui/Button';
 import { Input } from '../../../components/ui/Input';
-import { postServiceRequest } from '../api/klinikService';
-import { AlertTriangle, CheckCircle } from 'lucide-react';
+import { Poppins } from '../../../components/ui/Text';
+import { useServiceForm } from '../hooks/useServiceForm';
+import { AlertTriangle, CheckCircle, Upload } from 'lucide-react';
+import servicePhoto from '../../../core/assets/images/service.jpg'
 
-const ServiceSection = () => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [status, setStatus] = useState({ type: '', message: '' });
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setStatus({ type: '', message: '' });
-
-    try {
-      await postServiceRequest({ title, description });
-      setStatus({ type: 'success', message: 'Permintaan Anda telah berhasil dikirim!' });
-      setTitle('');
-      setDescription('');
-    } catch (error) {
-      setStatus({ type: 'error', message: 'Gagal mengirim permintaan. Silakan coba lagi.' });
-    } finally {
-      setIsLoading(false);
-    }
-  };
+export default function ServiceSection() {
+  const { formData, status, isLoading, handleChange, handleSubmit } = useServiceForm();
 
   return (
-    <section id="services" className="bg-white py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900">Klinik Teknologi</h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Punya masalah dengan tugas, laptop, atau butuh jasa instalasi? Sampaikan di sini!
-          </p>
+    <section id="services" className="py-20 bg-white dark:bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <Poppins className="text-white font-semibold bg-yellow-400 px-6 py-2 rounded-full tracking-wider uppercase text-sm mx-auto w-fit">
+            Klinik Teknologi
+          </Poppins>
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+            Butuh Bantuan? Sampaikan di Sini
+          </h2>
+          <Poppins className="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+            Punya masalah dengan tugas, laptop, atau butuh jasa instalasi? Isi form di bawah dan tim kami akan segera membantu Anda.
+          </Poppins>
         </div>
-        <div className="mt-12 max-w-lg mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="title" className="block text-sm font-medium text-gray-700">Judul Permintaan</label>
-              <Input
-                id="title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                placeholder="cth: Install Ulang Windows 11"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="description" className="block text-sm font-medium text-gray-700">Deskripsi Masalah</label>
-              <textarea
-                id="description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                rows={4}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500 sm:text-sm"
-                placeholder="Jelaskan masalah atau kebutuhan Anda secara detail..."
-                required
-              />
-            </div>
-            {status.message && (
-              <div className={`flex items-center gap-2 p-3 rounded-md text-sm ${
-                status.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-              }`}>
-                {status.type === 'success' ? <CheckCircle size={20} /> : <AlertTriangle size={20} />}
-                {status.message}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Kolom Kiri: Ilustrasi */}
+          <div className="hidden md:block">
+            <img 
+              src={servicePhoto}
+              alt="Klinik Teknologi"
+              className="rounded-lg shadow-xl w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Kolom Kanan: Form */}
+          <div className="max-w-lg mx-auto w-full">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="title" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Judul Permintaan</label>
+                <Input
+                  id="title"
+                  name="title"
+                  value={formData.title}
+                  onChange={handleChange}
+                  placeholder="cth: Install Ulang Windows 11"
+                  required
+                />
               </div>
-            )}
-            <div>
-              <Button type="submit" className="w-full" disabled={isLoading}>
-                {isLoading ? 'Mengirim...' : 'Kirim Permintaan'}
-              </Button>
-            </div>
-          </form>
+              <div>
+                <label htmlFor="description" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Deskripsi Masalah</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  value={formData.description}
+                  onChange={handleChange}
+                  rows={5}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500 sm:text-sm dark:bg-gray-800 dark:border-gray-600 dark:text-white"
+                  placeholder="Jelaskan masalah atau kebutuhan Anda secara detail..."
+                  required
+                />
+              </div>
+               <div>
+                <label htmlFor="image" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Lampirkan Gambar (Opsional)</label>
+                 <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                   <div className="space-y-1 text-center">
+                     <Upload className="mx-auto h-12 w-12 text-gray-400" />
+                     <div className="flex text-sm text-gray-600 dark:text-gray-400">
+                       <label htmlFor="image" className="relative cursor-pointer bg-white dark:bg-gray-900 rounded-md font-medium text-yellow-600 hover:text-yellow-500 focus-within:outline-none">
+                         <span>Upload a file</span>
+                         <input id="image" name="image" type="file" className="sr-only" onChange={handleChange} accept="image/*" />
+                       </label>
+                       <p className="pl-1">or drag and drop</p>
+                     </div>
+                     <p className="text-xs text-gray-500">{formData.image ? formData.image.name : 'PNG, JPG, GIF up to 10MB'}</p>
+                   </div>
+                 </div>
+               </div>
+
+              {status.message && (
+                <div className={`flex items-center gap-2 p-3 rounded-md text-sm ${
+                  status.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                }`}>
+                  {status.type === 'success' ? <CheckCircle size={20} /> : <AlertTriangle size={20} />}
+                  {status.message}
+                </div>
+              )}
+              <div>
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                  {isLoading ? 'Mengirim...' : 'Kirim Permintaan'}
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default ServiceSection;
+}

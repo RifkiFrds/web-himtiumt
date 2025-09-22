@@ -2,9 +2,11 @@ import { useKlinik } from '../hooks/useKlinik';
 import LoadingStatus from '../../../components/LoadingStatus';
 import ErrorStatus from '../../../components/ErrorStatus';
 import HeroSection from '../components/HeroSection';
-import ServiceSection from '../components/ServiceSection';
+import FeaturedSection from '../components/FeaturedSection';
 import MerchandiseSection from '../components/MerchandiseSection';
-import CtaSection from '../components/CtaSection';
+import ServiceSection from '../components/ServiceSection'; 
+import FAQSection from '../components/FAQSection';
+import ContactSection from '../../about/components/contact-section/ContactSection';
 
 const KlinikPage = () => {
   const { loading, error, merchandise, fetchData } = useKlinik();
@@ -21,8 +23,10 @@ const KlinikPage = () => {
     <div>
       <HeroSection />
       <MerchandiseSection merchandise={merchandise} />
+      <FeaturedSection />
       <ServiceSection />
-      <CtaSection />
+      <FAQSection />
+      <ContactSection />
     </div>
   );
 };
