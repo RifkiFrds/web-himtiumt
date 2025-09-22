@@ -3,6 +3,10 @@ import { Poppins } from "../../../../components/ui/Text";
 import { Button } from "../../../../components/ui/Button";
 import { NavLink } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import webPhoto from "../../../../core/assets/images/web.jpg";
+import mobilePhoto from "../../../../core/assets/images/mobile.jpg";
+import uiuxPhoto from "../../../../core/assets/images/uiux.jpg";
+import cyberPhoto from "../../../../core/assets/images/cyber.jpg";
 
 // Data untuk section
 const programContent = [
@@ -29,7 +33,7 @@ const programContent = [
     content: (
       <div className="h-full w-full flex items-center justify-center">
         <img
-          src="/images/program/web.jpg"
+          src={webPhoto}
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -61,7 +65,7 @@ const programContent = [
     content: (
       <div className="h-full w-full flex items-center justify-center">
         <img
-          src="/images/program/mobile.jpg"
+          src={mobilePhoto}
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -93,7 +97,7 @@ const programContent = [
     content: (
       <div className="h-full w-full flex items-center justify-center">
         <img
-          src="/images/program/uiux.jpg"
+          src={uiuxPhoto}
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -125,7 +129,7 @@ const programContent = [
     content: (
       <div className="h-full w-full flex items-center justify-center">
         <img
-          src="/images/program/cyber.jpg"
+          src={cyberPhoto}
           width={300}
           height={300}
           className="h-full w-full object-cover"
