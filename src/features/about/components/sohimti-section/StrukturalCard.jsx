@@ -2,7 +2,9 @@
 import { Linkedin, Instagram } from "lucide-react";
 import { cn } from "../../../../lib/utils";
 
-export const StrukturalCard = ({ member, className }) => (
+export const StrukturalCard = ({ member, className }) => {
+
+  return (
   <div className={cn("group relative aspect-square w-full overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl", className)}>
     <img 
       src={member.image} 
@@ -41,3 +43,4 @@ export const StrukturalCard = ({ member, className }) => (
     </div>
   </div>
 );
+}

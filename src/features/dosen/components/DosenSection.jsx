@@ -31,7 +31,7 @@ export default function DosenSection() {
   }
 
   return (
-    <section className="py-20">
+    <section className="py-20 animate-fade-in-up">
       <div className="max-w-7xl mx-auto px-4">
         <div className="w-full mx-auto text-center mb-16">
           <h1 className="mb-6 text-4xl md:text-5xl font-bold leading-tight tracking-tight text-gray-900">

@@ -33,7 +33,7 @@ export default function AngkatanSection({ isFullPage = false }) {
   if (error) return <ErrorStatus message={error} />;
   
   return (
-    <section id="angkatan-gallery" className="py-20 bg-white">
+    <section id="angkatan-gallery" className="py-20 bg-white animate-fade-in-up">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
           Galeri <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-blue-800">Angkatan</span>
