@@ -13,7 +13,7 @@ export const GlowingCard = ({
   return (
     <div
       className={cn(
-        "relative flex-1 min-w-[14rem] p-6 rounded-2xl text-black dark:text-white",
+        "relative flex-1 min-w-[14rem] p-6 rounded-2xl text-black",
         "bg-background border ",
         "transition-all duration-400 ease-out",
         className
@@ -137,8 +137,8 @@ export const GlowingCards = ({
                   return React.cloneElement(child, {
                     className: cn(
                       child.props.className,
-                      "bg-opacity-15 dark:bg-opacity-15",
-                      "border-opacity-100 dark:border-opacity-100"
+                      "bg-opacity-15",
+                      "border-opacity-100"
                     ),
                     style: {
                       ...child.props.style,

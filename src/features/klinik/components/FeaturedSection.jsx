@@ -24,10 +24,10 @@ const FeaturedSection = () => {
           <Poppins className="text-white font-semibold bg-gradient-to-r from-[#4C76A3] to-[#203D5D] px-6 py-2 rounded-full tracking-wider uppercase text-sm mx-auto w-fit">
             Layanan Unggulan
           </Poppins>
-          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold text-gray-900">
             Solusi Kebutuhan Teknologi Anda
           </h2>
-          <Poppins className="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+          <Poppins className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
             Dari perbaikan perangkat hingga pengembangan aplikasi, tim ahli kami siap membantu setiap tantangan teknis dan kreatif Anda.
           </Poppins>
         </div>
@@ -36,11 +36,11 @@ const FeaturedSection = () => {
           {services.map(service => (
             <GlowingCard key={service.title} glowColor={service.glowColor}>
               <div className="flex flex-col items-start h-full">
-                <div className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full mb-4">
-                  {React.cloneElement(service.icon, { className: "h-6 w-6 text-gray-800 dark:text-gray-200" })}
+                <div className="p-3 bg-gray-100 rounded-full mb-4">
+                  {React.cloneElement(service.icon, { className: "h-6 w-6 text-gray-800" })}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">{service.title}</h3>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 flex-grow">
+                <h3 className="text-lg font-bold text-gray-900">{service.title}</h3>
+                <p className="mt-2 text-sm text-gray-600 flex-grow">
                   {service.description}
                 </p>
               </div>

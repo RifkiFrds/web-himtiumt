@@ -102,7 +102,7 @@ export default function ImageReveal() {
 
           {/* underline animasi */}
           <div
-            className={`h-[2px] dark:bg-white bg-black absolute bottom-0 left-0 transition-all duration-300 ease-linear ${
+            className={`h-[2px] bg-black absolute bottom-0 left-0 transition-all duration-300 ease-linear ${
               focusedItem?.key === item.key ? "w-full" : "w-0"
             }`}
           />
