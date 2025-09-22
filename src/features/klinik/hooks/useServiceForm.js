@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createServiceRequest, uploadServiceImage } from '../api/klinikService';
+import { createServiceRequest } from '../api/klinikService';
 
 export const useServiceForm = () => {
   const [formData, setFormData] = useState({ title: '', description: '', image: null });
@@ -20,20 +20,18 @@ export const useServiceForm = () => {
     setIsLoading(true);
     setStatus({ type: '', message: '' });
 
+    // Cek jika gambar wajib ada
+    if (!formData.image) {
+        setStatus({ type: 'error', message: 'Gambar wajib diunggah.' });
+        setIsLoading(false);
+        return;
+    }
+
     try {
-      const createResponse = await createServiceRequest({
-        title: formData.title,
-        description: formData.description,
-      });
-
-      const businessId = createResponse.data.id;
-
-      if (formData.image && businessId) {
-        await uploadServiceImage({ businessId, image: formData.image });
-      }
+      // Panggil satu fungsi yang mengirim semua data
+      await createServiceRequest(formData);
 
       setStatus({ type: 'success', message: 'Permintaan Anda telah berhasil dikirim!' });
-      // Reset form
       setFormData({ title: '', description: '', image: null });
       setTimeout(() => setStatus({ type: '', message: '' }), 5000);
 
