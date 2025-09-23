@@ -32,12 +32,13 @@ export default function SoHimtiSection() {
       <div className="mt-16 max-w-5xl mx-auto px-4 flex flex-col items-center space-y-8">
         {/* Baris Atas (2 orang) */}
         <div className="w-full flex flex-col sm:flex-row justify-center gap-6">
-          {topTwo.map((member) => (
-            <div key={member.id} className="w-full sm:w-1/2 h-full">
-              <StrukturalCard member={member} className="h-full sm:h-full" />
-            </div>
-          ))}
-        </div>
+        {(window.innerWidth < 640 ? [...topTwo].reverse() : topTwo).map((member) => (
+       <div key={member.id} className="w-full sm:w-1/2 h-full">
+        <StrukturalCard member={member} className="h-full sm:h-full" />
+       </div>
+       ))}
+     </div>
+
 
         {/* Baris Tengah (4 orang) */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
