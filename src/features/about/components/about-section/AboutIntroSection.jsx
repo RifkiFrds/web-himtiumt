@@ -1,43 +1,12 @@
-import { useRef, useState } from "react";
 import { Poppins } from "../../../../components/ui/Text";
 import { Cover } from "./Cover";
-import { motion } from "framer-motion";
-import { DraggableCard } from "./DraggableCard";
-
-// Data card angkatan
-const initialAngkatanData = [
-  {
-    title: "Bootcamp Angkatan 2021",
-    image: "/images/bootcamp/himti-bootcamp21.jpg",
-  },
-  {
-    title: "Bootcamp Angkatan 2022",
-    image: "/images/bootcamp/himti-bootcamp22.jpg",
-  },
-  {
-    title: "Bootcamp Angkatan 2023",
-    image: "/images/bootcamp/himti-bootcamp23.jpg",
-  },
-  {
-    title: "Bootcamp Angkatan 2024",
-    image: "/images/bootcamp/himti-bootcamp24.jpg",
-  },
-];
+import { FramedPhoto } from "./FramedPhoto";
+import himtiBootcamp from "../../../../core/assets/images/himti-bootcamp.png";
 
 export default function AboutIntroSection() {
-  const constraintsRef = useRef(null);
-  const [cards, setCards] = useState(initialAngkatanData);
-
-  const handleCardClick = (clickedIndex) => {
-    const newCards = [...cards];
-    const clickedCard = newCards.splice(clickedIndex, 1);
-    newCards.push(clickedCard[0]);
-    setCards(newCards);
-  };
-
   return (
     <section className="py-20 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         {/* --- Kolom Kiri Teks --- */}
         <div className="flex flex-col space-y-6 text-center lg:text-left items-center lg:items-start animate-fade-in-up">
@@ -66,31 +35,12 @@ export default function AboutIntroSection() {
           </div>
         </div>
 
-        {/* --- Kolom Kanan Card--- */}
-        <div
-          ref={constraintsRef}
-          className="relative w-full h-[450px] flex items-center justify-center animate-fade-in-up"
-        >
-          {cards.map((item, index) => (
-            <motion.div
-              key={item.title}
-              className="absolute cursor-grab active:cursor-grabbing"
-              drag
-              dragConstraints={constraintsRef}
-              dragElastic={0.2}
-              onTap={() => handleCardClick(index)}
-              style={{ transformOrigin: "bottom center" }}
-              animate={{
-                x: (cards.length - 1 - index) * 10,
-                y: (cards.length - 1 - index) * 10,
-                scale: 1 - (cards.length - 1 - index) * 0.05,
-                zIndex: index,
-              }}
-              transition={{ type: "spring", stiffness: 100, damping: 20 }}
-            >
-              <DraggableCard item={item} />
-            </motion.div>
-          ))}
+        {/* --- Kolom Kanan Foto dengan Bingkai --- */}
+        <div className="w-full flex items-center justify-center animate-fade-in-up">
+          <FramedPhoto 
+            imageUrl={himtiBootcamp}
+            altText="Foto Kegiatan HIMTI" 
+          />
         </div>
       </div>
     </section>
