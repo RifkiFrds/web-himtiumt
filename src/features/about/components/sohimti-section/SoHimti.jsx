@@ -43,14 +43,14 @@ export default function SoHimtiSection() {
         {/* Baris Tengah (4 orang) */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {middleFour.map((member) => (
-            <StrukturalCard key={member.id} member={member} />
+            <StrukturalCard key={member.id} member={member} className="w-full h-auto min-h-[20rem] sm:min-h-[24rem]"/>
           ))}
         </div>
 
         {/* Baris Bawah (4 orang) */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {bottomFour.map((member) => (
-            <StrukturalCard key={member.id} member={member} />
+            <StrukturalCard key={member.id} member={member} className="w-full h-auto min-h-[20rem] sm:min-h-[24rem]" />
           ))}
         </div>
       </div>
