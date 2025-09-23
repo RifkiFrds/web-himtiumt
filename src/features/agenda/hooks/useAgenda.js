@@ -25,10 +25,13 @@ export const useAgenda = () => {
 
   const { upcomingEvents, finishedEvents } = useMemo(() => {
     const now = new Date();
+    // Urutkan acara dari yang paling dekat tanggalnya
+    const sortedAcara = [...acara].sort((a, b) => new Date(a.startTime) - new Date(b.startTime));
+
     const upcoming = [];
     const finished = [];
 
-    acara.forEach(event => {
+    sortedAcara.forEach(event => {
       const endTime = new Date(event.endTime);
       if (endTime > now) {
         upcoming.push(event);
@@ -40,12 +43,5 @@ export const useAgenda = () => {
     return { upcomingEvents: upcoming, finishedEvents: finished };
   }, [acara]);
 
-  // Kembalikan semua state dan fungsi yang dibutuhkan oleh UI
-  return {
-    loading,
-    error,
-    upcomingEvents,
-    finishedEvents,
-    fetchAcara, 
-  };
+  return { loading, error, upcomingEvents, finishedEvents, fetchAcara };
 };

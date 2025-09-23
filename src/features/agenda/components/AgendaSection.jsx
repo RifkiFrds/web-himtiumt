@@ -6,6 +6,10 @@ import { motion } from "framer-motion";
 // Helper function untuk mengubah data API menjadi format yang dibutuhkan TimelineItem
 const formatEventForTimeline = (event) => {
   const startTime = new Date(event.startTime);
+
+const descriptionText = event.description 
+    ? event.description 
+    : `Sebuah acara ${event.type === 'COMMON' ? 'Umum' : 'Lainnya'} yang diselenggarakan oleh HIMTI. ${event.isOpen ? 'Pendaftaran masih dibuka!' : ''}`; 
   
   return {
     id: event.id,
@@ -13,7 +17,7 @@ const formatEventForTimeline = (event) => {
     date: startTime.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
     time: startTime.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' }) + ' WIB',
     location: "Informasi Lokasi Menyusul", 
-    description: `Sebuah acara ${event.type === 'COMMON' ? 'Umum' : 'Lainnya'} yang diselenggarakan oleh HIMTI. ${event.isOpen ? 'Pendaftaran masih dibuka!' : ''}`,
+    description: descriptionText,
     tags: [event.type === 'COMMON' ? 'Umum' : 'Acara', event.isOpen ? 'Pendaftaran Dibuka' : 'Ditutup'],
     status: new Date(event.endTime) > new Date() ? 'upcoming' : 'finished',
     image: event.image, // Menambahkan properti image
