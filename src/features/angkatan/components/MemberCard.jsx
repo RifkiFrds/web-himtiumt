@@ -20,7 +20,7 @@ export const MemberCard = ({ data }) => {
           
           {/* Logika untuk LinkedIn */}
           {data.socials?.linkedin ? (
-            <a href={data.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-700">
+            <a href={`https://www.linkedin.com/in/${data.socials.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-700">
               <Linkedin size={20} />
             </a>
           ) : (
@@ -31,7 +31,7 @@ export const MemberCard = ({ data }) => {
 
           {/* Logika untuk Instagram */}
           {data.socials?.instagram ? (
-            <a href={data.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-600">
+            <a href={`https://instagram.com/${data.socials.instagram}`} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-600">
               <Instagram size={20} />
             </a>
           ) : (
@@ -42,7 +42,7 @@ export const MemberCard = ({ data }) => {
 
           {/* Logika untuk Github */}
           {data.socials?.github ? (
-            <a href={data.socials.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900">
+            <a href={`https://github.com/${data.socials.github}`}target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900">
               <Github size={20} />
             </a>
           ) : (

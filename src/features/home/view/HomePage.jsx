@@ -4,6 +4,7 @@ import PrestasiSection from "../components/prestasi-section/PrestasiSection";
 import ProgramSection from "../components/program-section/ProgramSection";
 import AlumniSection from "../components/alumni-section/AlumniSection";
 import BannerSection from "../components/hero-section/BannerSection";
+import LatestAgendaSection from "../components/latest-agenda-section/LatestAgendaSection";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <HeroSection />
       <BannerSection />
       <MiniAboutSection />
+      <LatestAgendaSection />
       <PrestasiSection />
       <ProgramSection />
       <AlumniSection />
