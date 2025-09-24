@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { createServiceRequest } from '../api/klinikService';
 
 export const useServiceForm = () => {
   const [formData, setFormData] = useState({ title: '', description: '', image: null });
@@ -20,23 +19,40 @@ export const useServiceForm = () => {
     setIsLoading(true);
     setStatus({ type: '', message: '' });
 
-    // Cek jika gambar wajib ada
-    if (!formData.image) {
-        setStatus({ type: 'error', message: 'Gambar wajib diunggah.' });
-        setIsLoading(false);
-        return;
-    }
-
     try {
-      // Panggil satu fungsi yang mengirim semua data
-      await createServiceRequest(formData);
+      const phoneNumber = '6285210493501';
 
-      setStatus({ type: 'success', message: 'Permintaan Anda telah berhasil dikirim!' });
+      const message = `
+Halo, saya ingin mengajukan permintaan layanan dari Klinik Teknologi HIMTI.
+
+*Judul Permintaan:*
+${formData.title}
+
+*Deskripsi Masalah:*
+${formData.description}
+
+Terima kasih.
+      `.trim(); 
+
+      // Encode pesan agar sesuai format URL
+      const encodedMessage = encodeURIComponent(message);
+
+      // URL lengkap untuk WhatsApp
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+      window.open(whatsappURL, '_blank');
+
+      //  pesan sukses di halaman 
+      setStatus({ type: 'success', message: 'Anda telah dialihkan ke WhatsApp! Silakan kirim pesan Anda.' });
+
       setFormData({ title: '', description: '', image: null });
-      setTimeout(() => setStatus({ type: '', message: '' }), 5000);
+      // Reset input file secara manual jika diperlukan
+      const fileInput = document.getElementById('image');
+      if (fileInput) fileInput.value = '';
 
     } catch (error) {
-      setStatus({ type: 'error', message: 'Gagal mengirim permintaan. Silakan coba lagi.' });
+      // handle error
+      console.error("Gagal membuat link WhatsApp:", error);
+      setStatus({ type: 'error', message: 'Gagal mengalihkan ke WhatsApp. Silakan coba lagi.' });
     } finally {
       setIsLoading(false);
     }

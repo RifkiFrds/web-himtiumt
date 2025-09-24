@@ -2,7 +2,7 @@ import { Button } from '../../../components/ui/Button';
 import { Input } from '../../../components/ui/Input';
 import { Poppins } from '../../../components/ui/Text';
 import { useServiceForm } from '../hooks/useServiceForm';
-import { AlertTriangle, CheckCircle, Upload } from 'lucide-react';
+import { AlertTriangle, CheckCircle } from 'lucide-react'; 
 import servicePhoto from '../../../core/assets/images/service.jpg'
 
 export default function ServiceSection() {
@@ -11,6 +11,7 @@ export default function ServiceSection() {
   return (
     <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* ... bagian judul tidak berubah ... */}
         <div className="text-center mb-12">
           <Poppins className="text-white font-semibold bg-yellow-400 px-6 py-2 rounded-full tracking-wider uppercase text-sm mx-auto w-fit">
             Klinik Teknologi
@@ -61,22 +62,10 @@ export default function ServiceSection() {
                   required
                 />
               </div>
-               <div>
-                <label htmlFor="image" className="block text-sm font-medium text-gray-700 ">Lampirkan Gambar (Opsional)</label>
-                 <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                   <div className="space-y-1 text-center">
-                     <Upload className="mx-auto h-12 w-12 text-gray-400" />
-                     <div className="flex text-sm text-gray-600">
-                       <label htmlFor="image" className="relative cursor-pointer bg-white rounded-md font-medium text-yellow-600 hover:text-yellow-500 focus-within:outline-none">
-                         <span>Upload a file</span>
-                         <input id="image" name="image" type="file" className="sr-only" onChange={handleChange} accept="image/*" />
-                       </label>
-                       <p className="pl-1">or drag and drop</p>
-                     </div>
-                     <p className="text-xs text-gray-500">{formData.image ? formData.image.name : 'PNG, JPG, GIF up to 10MB'}</p>
-                   </div>
-                 </div>
-               </div>
+              
+              <p className="text-xs text-center text-gray-500">
+                Jika ada gambar/screenshot, Anda dapat mengirimkannya langsung di WhatsApp.
+              </p>
 
               {status.message && (
                 <div className={`flex items-center gap-2 p-3 rounded-md text-sm ${
@@ -88,7 +77,7 @@ export default function ServiceSection() {
               )}
               <div>
                 <Button type="submit" className="w-full" disabled={isLoading}>
-                  {isLoading ? 'Mengirim...' : 'Kirim Permintaan'}
+                  {isLoading ? 'Mengarahkan...' : 'Kirim via WhatsApp'}
                 </Button>
               </div>
             </form>
