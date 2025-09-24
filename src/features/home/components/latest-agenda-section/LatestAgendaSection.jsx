@@ -30,7 +30,7 @@ const LatestAgendaSection = () => {
   }
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
@@ -78,9 +78,14 @@ const LatestAgendaSection = () => {
             ))}
           </div>
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-12 flex justify-center text-center">
             <Link to="/agenda">
-                <Button variant="secondary" rounded="full">Lihat Semua Agenda</Button>
+                <Button variant="secondary" rounded="full" size="lg">
+                 <div className="flex items-center gap-2 px-4">
+                    <span>Lihat Semua Agenda</span>
+                    <ArrowRight size={18} />
+                  </div>
+                  </Button>
             </Link>
         </div>
       </div>

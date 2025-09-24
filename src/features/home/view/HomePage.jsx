@@ -5,6 +5,7 @@ import ProgramSection from "../components/program-section/ProgramSection";
 import AlumniSection from "../components/alumni-section/AlumniSection";
 import BannerSection from "../components/hero-section/BannerSection";
 import LatestAgendaSection from "../components/latest-agenda-section/LatestAgendaSection";
+import LatestTutorialSection from "../components/latest-tutorials-section/LatestTutorialsSection";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <BannerSection />
       <MiniAboutSection />
       <LatestAgendaSection />
+      <LatestTutorialSection />
       <PrestasiSection />
       <ProgramSection />
       <AlumniSection />
