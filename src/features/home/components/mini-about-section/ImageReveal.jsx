@@ -3,27 +3,31 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import { MoveUpRight as ArrowIcon } from "lucide-react";
 import { Poppins } from "../../../../components/ui/Text";
 import { Link } from "react-router-dom";
+import himti21 from "../../../../core/assets/images/bootcamp/himti-bootcamp21.jpg";
+import himti22 from "../../../../core/assets/images/bootcamp/himti-bootcamp22.jpg";
+import himti23 from "../../../../core/assets/images/bootcamp/himti-bootcamp23.jpg";
+import himti24 from "../../../../core/assets/images/bootcamp/himti-bootcamp24.jpg";
 
 // Updated data to be more relevant
 const visualData = [
   {
     key: 1,
-    url: "/images/bootcamp/himti-bootcamp21.jpg",
+    url: himti21,
     label: "Galeri Angkatan 2021",
   },
   {
     key: 2,
-    url: "/images/bootcamp/himti-bootcamp22.jpg",
+    url: himti22,
     label: "Galeri Angkatan 2022",
   },
   {
     key: 3,
-    url: "/images/bootcamp/himti-bootcamp23.jpg",
+    url: himti23,
     label: "Galeri Angkatan 2023",
   },
   {
     key: 4,
-    url: "/images/bootcamp/himti-bootcamp24.jpg",
+    url: himti24,
     label: "Galeri Angkatan 2024",
   },
 ];

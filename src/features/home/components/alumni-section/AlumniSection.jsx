@@ -1,5 +1,7 @@
 import { TestimonialsCarousel } from "./AnimatedTestimonials";
 import { Poppins } from "../../../../components/ui/Text";
+import avatarMan from "../../../../core/assets/images/avatar-man.jpg";
+import avatarWoman from "../../../../core/assets/images/avatar-woman.jpg";
 
 export default function AlumniSection() {
   return (
@@ -34,7 +36,7 @@ const alumniData = [
     title: "Web Developer",
     company: "PT. Griya Fortuna Internasional",
     period: "Desember 2021 - Present",
-    image: "/images/avatar-woman.jpg",
+    image: avatarWoman,
     socials: { linkedin: "#", instagram: "#", github: "#" },
   },
   {
@@ -42,7 +44,7 @@ const alumniData = [
     title: "Android Developer",
     company: "PT. Healstation Indonesia",
     period: "Juni 2022 - Now",
-    image: "/images/avatar-man.jpg",
+    image: avatarMan,
     socials: { linkedin: "#", instagram: "#", github: "#" },
   },
   {
@@ -50,7 +52,7 @@ const alumniData = [
     title: "IT Security Operation Center Analyst",
     company: "PT. Mitra Integrasi Informatika",
     period: "",
-    image: "/images/avatar-man.jpg",
+    image: avatarMan,
     socials: { linkedin: "#", instagram: "#" },
   },
   {
@@ -58,7 +60,7 @@ const alumniData = [
     title: "Founder",
     company: "PT. Kelas Tambahan Nusantara",
     period: "",
-    image: "/images/avatar-man.jpg",
+    image: avatarMan,
     socials: { linkedin: "#", instagram: "#", github: "#" },
   },
   {
@@ -66,7 +68,7 @@ const alumniData = [
     title: "New Branch Delivery System Apps",
     company: "PT. Bank Mandiri Indonesia",
     period: "Oktober 2021 - Sekarang",
-    image: "/images/avatar-man.jpg",
+    image: avatarMan,
     socials: { linkedin: "#", instagram: "#", github: "#" },
   },
 ];
