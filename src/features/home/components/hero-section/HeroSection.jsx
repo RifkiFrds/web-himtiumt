@@ -3,7 +3,7 @@ import { HeroHighlight, Highlight } from "./HeroHighlight";
 import { Button } from "../../../../components/ui/Button";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Poppins } from "../../../../components/ui/Text";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 export default function HeroSection() {
   return (
@@ -45,21 +45,25 @@ export default function HeroSection() {
         >
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-xs sm:max-w-none mx-auto">
             <div className="w-full sm:w-auto">
+              <NavLink to="/#mini-about">
               <Button variant="primary" size="lg" rounded="full">
                 <div className="flex items-center justify-center gap-2 px-4">
-                  <Link to="/">Mulai Jelajahi</Link>
+                  <span>Mulai Jelajahi</span>
                   <ArrowRight size={18} />
                 </div>
               </Button>
+              </NavLink>
             </div>
 
             <div className="w-full sm:w-auto">
+              <NavLink to="/agenda" >
               <Button variant="secondary" size="lg" rounded="full">
                 <div className="flex items-center justify-center gap-2 px-4">
                   <BookOpen size={18} />
-                  <Link to="/agenda">Lihat Kegiatan</Link>
+                  <span to="/agenda">Lihat Kegiatan</span>
                 </div>
               </Button>
+              </NavLink>
             </div>
           </div>
         </motion.div>

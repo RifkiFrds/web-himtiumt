@@ -10,11 +10,11 @@ import himtiLogo  from "../../../core/assets/images/himti-logo.png";
 const navLinks = [
   { name: "Home", to: "/" },
   { name: "Tentang", to: "/tentang" },
-  { name: "Artikel", to: "/artikel" },
+  { name: "Anggota", to: "/angkatan"},
+  // { name: "Artikel", to: "/artikel" },
 ];
 const kegiatanSubMenu = [
   { name: "Materi", to: "/materi" },
-  { name: "Anggota", to: "/angkatan"},
   { name: "Tutorial", to: "/tutorial" },
   { name: "Agenda", to: "/agenda" },
 ];

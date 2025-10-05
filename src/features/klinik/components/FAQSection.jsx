@@ -34,7 +34,7 @@ const FAQSection = () => {
             Butuh Bantuan?
           </Poppins>
           <h2 className="mt-2 text-4xl md:text-5xl font-bold text-gray-900">
-            Pertanyaan Umum
+            HIMTI 101
           </h2>
           <Poppins className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
             Temukan jawaban cepat untuk pertanyaan yang paling sering diajukan seputar layanan dan produk kami.

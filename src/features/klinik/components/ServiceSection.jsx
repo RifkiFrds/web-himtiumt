@@ -11,7 +11,7 @@ export default function ServiceSection() {
   return (
     <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* ... bagian judul tidak berubah ... */}
+        {/* judul */}
         <div className="text-center mb-12">
           <Poppins className="text-white font-semibold bg-yellow-400 px-6 py-2 rounded-full tracking-wider uppercase text-sm mx-auto w-fit">
             Klinik Teknologi

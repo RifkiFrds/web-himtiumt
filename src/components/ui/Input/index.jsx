@@ -71,7 +71,7 @@ export const Input = forwardRef(
               : inputSize === "md"
                 ? "px-4"
                 : inputSize === "lg"
-                  ? "px-6"
+                  ? "px-20"
                   : ""
           }
               ${

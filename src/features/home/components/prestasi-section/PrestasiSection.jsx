@@ -3,7 +3,7 @@ import { getPrestasi } from '../../api/prestasiService';
 import { ParallaxScroll } from "./ParallaxScroll";
 import { Poppins } from "../../../../components/ui/Text";
 import Shimmer from '../../../../components/Shimmer';
-import {StatusDisplay} from '../../../../components/StatusDisplay';
+import { StatusError } from '../../../../components/StatusDisplay';
 
 export default function PrestasiSection() {
   const [prestasiItems, setPrestasiItems] = useState([]);
@@ -19,7 +19,7 @@ export default function PrestasiSection() {
           title: item.title,
           description: item.description,
           badge: item.badge,
-          src: item.image, // Menggunakan 'imageUrl' dari API sebagai 'src'
+          src: item.image, 
         }));
         setPrestasiItems(formattedData);
       } catch (err) {
@@ -45,7 +45,7 @@ export default function PrestasiSection() {
 
   if (error) {
     // Menampilkan pesan error jika API gagal
-    return <StatusDisplay message={error} />;
+    return <StatusError message={error} />;
   }
 
   return (

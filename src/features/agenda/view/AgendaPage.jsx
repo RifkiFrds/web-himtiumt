@@ -3,7 +3,7 @@ import { useAgenda } from '../hooks/useAgenda';
 import AgendaSection from '../components/AgendaSection';
 import LoadingStatus from '../../../components/LoadingStatus'; 
 import ErrorStatus from '../../../components/ErrorStatus';
-import { StatusDisplay } from '../../../components/StatusDisplay';
+import { StatusError } from '../../../components/StatusDisplay';
 
 const AgendaPage = () => {
   // Panggil state dan fungsi
@@ -25,7 +25,7 @@ const AgendaPage = () => {
   }
 
   if (upcomingEvents.length === 0 && finishedEvents.length === 0) {
-    return <StatusDisplay message="Saat ini belum ada data kegiatan." />
+    return <StatusError message="Saat ini belum ada data kegiatan." />
   }
 
   return (
