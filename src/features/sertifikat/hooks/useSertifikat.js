@@ -1,4 +1,3 @@
-// src/features/sertifikat/hooks/useSertifikat.js
 import { useState } from 'react';
 import { mockCertificate } from '../data/mockSertifikat';
 
@@ -16,16 +15,6 @@ export const useSertifikat = () => {
 
     // Simulasi pemanggilan API
     await new Promise(resolve => setTimeout(resolve, 1500));
-
-    // **NANTI:** Ganti bagian ini dengan API call asli
-    // try {
-    //   const response = await validateSertifikatAPI(sertifikatId);
-    //   setResult({ valid: true, data: response.data });
-    // } catch (error) {
-    //   setResult({ valid: false, data: null });
-    // } finally {
-    //   setIsLoading(false);
-    // }
     
     // Logika statis untuk saat ini
     if (sertifikatId.toUpperCase() === mockCertificate.id) {

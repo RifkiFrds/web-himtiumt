@@ -1,4 +1,3 @@
-// src/features/sertifikat/components/HeroSection.jsx
 import { Poppins } from '../../../components/ui/Text';
 import { Input } from '../../../components/ui/Input';
 import { Button } from '../../../components/ui/Button';
@@ -24,7 +23,7 @@ const SertifikatSection = () => {
           Kamu dapat cek validitas e-Sertifikat dengan memasukan nomor e-sertifikat.
         </Poppins>
 
-        {/* --- FORM PERUBAHAN DI SINI --- */}
+        {/* --- FORM  --- */}
         <form onSubmit={handleValidation} className="mt-10 max-w-lg mx-auto flex flex-col items-center gap-4">
           <Input 
             value={sertifikatId}
@@ -46,12 +45,12 @@ const SertifikatSection = () => {
             >
               <div className="flex items-center justify-center gap-2">
                 {isLoading ? 'Memeriksa...' : 'Validasi'}
+                <Search size={18} />
               </div>
             </Button>
           </div>
         </form>
 
-        {/* --- HASIL VALIDASI (TIDAK ADA PERUBAHAN) --- */}
         <div className="mt-12 text-left">
           {result && !isLoading && (
             result.valid ? (
