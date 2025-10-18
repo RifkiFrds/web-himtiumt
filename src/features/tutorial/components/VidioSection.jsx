@@ -35,6 +35,7 @@ export default function VidioSection({ tutorials }) {
                     width="1000"
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                     alt={tutorial.title}
+                    loading="lazy"
                   />
                 </CardItem>
                 <div className="flex justify-end items-center mt-5">

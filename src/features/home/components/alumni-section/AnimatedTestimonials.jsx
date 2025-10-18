@@ -95,6 +95,7 @@ export const TestimonialsCarousel = ({
                     src={item.image}
                     alt={item.name}
                     className="w-14 h-14 rounded-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <div className="ml-4">

@@ -40,6 +40,7 @@ export default function TeamCarousel({ members }) {
                   src={member.image}
                   alt={member.name}
                   className="w-full h-100 object-cover"
+                  loading="lazy"
                 />
                 <div className="p-4 text-center">
                   <h3 className="text-lg font-bold text-gray-900">

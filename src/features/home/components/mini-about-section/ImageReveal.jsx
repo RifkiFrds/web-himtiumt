@@ -81,6 +81,7 @@ export default function ImageReveal() {
               src={item.url}
               className="sm:w-32 sm:h-20 w-full h-52 object-cover rounded-md"
               alt={item.label}
+              loading="lazy"
             />
           )}
 

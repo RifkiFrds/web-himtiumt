@@ -14,6 +14,7 @@ export default function BannerSection() {
             src={ logoHifest} 
             alt="hifest-logo"
             className="h-9 w-9 object-contain"
+            loading="lazy"
           />
         </div>
         <Poppins className="font-bold text-md">HIFEST 2025</Poppins>

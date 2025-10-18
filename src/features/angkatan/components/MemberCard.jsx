@@ -11,6 +11,7 @@ export const MemberCard = ({ data }) => {
           src={data.image}
           alt={data.name}
           className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-gray-100"
+          loading="lazy"
         />
         <h3 className="text-lg font-bold text-gray-900">{data.name}</h3>
         <Poppins className="bg-gradient-to-r from-[#4C76A3] to-[#203D5D] bg-clip-text text-transparent text-sm font-semibold">

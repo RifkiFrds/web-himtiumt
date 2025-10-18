@@ -23,6 +23,7 @@ const ProductCard = ({ item }) => {
               alt={`${item.title} ${index + 1}`}
               onClick={() => setActiveImage(img)}
               className={`w-16 h-16 object-cover rounded-md cursor-pointer border-2 ${activeImage === img ? 'border-yellow-500' : 'border-transparent'}`}
+              loading="lazy"
             />
           ))}
         </div>

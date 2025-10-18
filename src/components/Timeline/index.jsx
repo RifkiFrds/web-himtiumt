@@ -36,6 +36,7 @@ export const TimelineItem = ({ item }) => {
               src={item.image}
               alt={item.title}
               className="aspect-[4/5] w-full object-cover md:max-h-96"
+              loading="lazy"
             />
           </div>
 

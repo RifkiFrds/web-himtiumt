@@ -195,6 +195,7 @@ function SharingSection() {
                 src={img}
                 alt={course.title}
                 className="rounded-lg object-cover w-full h-40 sm:h-48"
+                loading="lazy"
               />
             ))}
           </div>

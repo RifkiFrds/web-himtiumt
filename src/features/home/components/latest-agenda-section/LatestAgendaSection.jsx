@@ -45,7 +45,7 @@ const LatestAgendaSection = () => {
           {/* Spotlight Card */}
           <Link to="/agenda" className="group block rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
             <div className="relative h-full">
-              <img src={spotlightEvent.image} alt={spotlightEvent.name} className="absolute inset-0 w-full h-full object-cover"/>
+              <img src={spotlightEvent.image} alt={spotlightEvent.name} className="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
               <div className="relative h-full flex flex-col justify-end p-6 text-white">
                 <div className="flex items-center gap-2 text-sm bg-black/30 backdrop-blur-sm px-3 py-1 rounded-full w-fit">

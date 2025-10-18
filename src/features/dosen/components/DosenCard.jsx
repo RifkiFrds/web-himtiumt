@@ -17,6 +17,7 @@ export const DosenCard = ({ item }) => {
           src={item.image}
           alt={item.name}
           className="w-full h-48 object-cover rounded-lg mb-4"
+          loading="lazy"
         />
         <h4 className="text-gray-900 font-bold tracking-wide mt-2 text-lg">
           {item.name}

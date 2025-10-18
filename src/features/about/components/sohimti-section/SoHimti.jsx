@@ -28,32 +28,43 @@ export default function SoHimtiSection() {
         </Poppins>
       </div>
 
-      {/* Cards */}
-      <div className="mt-16 max-w-5xl mx-auto px-4 flex flex-col items-center space-y-8">
-        {/* Baris Atas (2 orang) */}
-        <div className="w-full flex flex-col sm:flex-row justify-center gap-6">
-        {(window.innerWidth < 640 ? [...topTwo].reverse() : topTwo).map((member) => (
-       <div key={member.id} className="w-full sm:w-1/2 h-full">
-        <StrukturalCard member={member} className="h-full sm:h-full" />
-       </div>
-       ))}
-     </div>
-
-
-        {/* Baris Tengah (4 orang) */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {middleFour.map((member) => (
-            <StrukturalCard key={member.id} member={member} className="w-full h-auto min-h-[20rem] sm:min-h-[24rem]"/>
-          ))}
-        </div>
-
-        {/* Baris Bawah (4 orang) */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {bottomFour.map((member) => (
-            <StrukturalCard key={member.id} member={member} className="w-full h-auto min-h-[20rem] sm:min-h-[24rem]" />
-          ))}
-        </div>
+      {/* Top Row (Ketua & Wakil) */}
+      <div className="mt-16 max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {topTwo.map((member, idx) => (
+          <div
+            key={member.id}
+            className={`w-full ${
+              idx === 0 ? "sm:order-1" : "sm:order-2"
+            }`}
+          >
+            <StrukturalCard member={member} className="h-full" />
+          </div>
+        ))}
       </div>
+
+      {/* Middle Row (4 orang: Sekretaris, Bendahara) */}
+      <div className="mt-10 max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        {middleFour.map((member) => (
+          <StrukturalCard
+            key={member.id}
+            member={member}
+            className="w-full h-auto min-h-[20rem]"
+          />
+        ))}
+      </div>
+
+      {/* Bottom Row (4 orang: Departemen) */}
+      {bottomFour.length > 0 && (
+        <div className="mt-10 max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {bottomFour.map((member) => (
+            <StrukturalCard
+              key={member.id}
+              member={member}
+              className="w-full h-auto min-h-[20rem]"
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

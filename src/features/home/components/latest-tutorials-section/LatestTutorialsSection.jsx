@@ -45,7 +45,7 @@ const LatestTutorialsSection = () => {
                 <CardItem
                   as="p"
                   translateZ="60"
-                  className="text-neutral-500 text-sm mt-2 dark:text-neutral-300 line-clamp-3"
+                  className="text-neutral-500 text-sm mt-2 line-clamp-3"
                 >
                   {tutorial.description}
                 </CardItem>

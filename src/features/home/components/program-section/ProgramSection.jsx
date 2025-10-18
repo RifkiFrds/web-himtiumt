@@ -38,6 +38,7 @@ const programContent = [
           height={300}
           className="h-full w-full object-cover"
           alt="Web Development thumbnail"
+          loading="lazy"
         />
       </div>
     ),
@@ -70,6 +71,7 @@ const programContent = [
           height={300}
           className="h-full w-full object-cover"
           alt="Mobile Development thumbnail"
+          loading="lazy"
         />
       </div>
     ),
@@ -102,6 +104,7 @@ const programContent = [
           height={300}
           className="h-full w-full object-cover"
           alt="UI/UX Design thumbnail"
+          loading="lazy"
         />
       </div>
     ),
@@ -134,6 +137,7 @@ const programContent = [
           height={300}
           className="h-full w-full object-cover"
           alt="Cyber Security thumbnail"
+          loading="lazy"
         />
       </div>
     ),
